@@ -148,6 +148,11 @@ class Table:
             for pos in range(4):
                 actor = play.turn
                 controller = declarer if actor == dummy else actor
+                if pos == 0:
+                    # v18: the controller of the leading hand gets a prompt first
+                    # (only the controller — other clients would misparse it).
+                    prompt = "Dummy to lead" if actor == dummy else f"{actor} to lead"
+                    await self.clients[controller].send(prompt)
                 move = await self.clients[controller].expect(
                     lambda l: m if (m := p.parse_play(l)) and m.seat == actor else None,
                     f"{actor}'s card (from {controller})",

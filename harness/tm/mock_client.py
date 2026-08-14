@@ -99,6 +99,9 @@ class MockClient:
                 controller = declarer if actor == dummy else actor
                 led = trick[0][1][0] if trick else None
                 if controller == self.seat:
+                    if pos == 0:
+                        prompt = await self.recv()  # "... to lead"
+                        assert "to lead" in prompt, f"{self.seat}: expected lead prompt, got {prompt!r}"
                     source = self.hand if actor == self.seat else dummy_hand
                     card = lowest(source, led)
                     source.discard(card)
