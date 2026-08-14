@@ -1,0 +1,1897 @@
+15:58:23.020 <- ?     | Connecting "WBridge5" as NORTH using protocol version 18
+15:58:23.020 -> North | North ("WBridge5") seated
+15:58:29.519 <- ?     | Connecting "WBridge5" as EAST using protocol version 18
+15:58:29.520 -> East  | East ("WBridge5") seated
+15:58:35.287 <- ?     | Connecting "WBridge5" as SOUTH using protocol version 18
+15:58:35.287 -> South | South ("WBridge5") seated
+15:58:45.624 <- ?     | Connecting "WBridge5" as WEST using protocol version 18
+15:58:45.625 -> West  | West ("WBridge5") seated
+15:58:45.625 <- North | NORTH ready for teams
+15:58:45.625 -> North | Teams : N/S : "BridgeBot" E/W : "WBridge5". Playing IMPS
+15:58:45.625 <- East  | EAST ready for teams
+15:58:45.625 -> East  | Teams : N/S : "BridgeBot" E/W : "WBridge5". Playing IMPS
+15:58:45.627 <- South | SOUTH ready for teams
+15:58:45.627 -> South | Teams : N/S : "BridgeBot" E/W : "WBridge5". Playing IMPS
+15:58:45.991 <- West  | WEST ready for teams
+15:58:45.991 -> West  | Teams : N/S : "BridgeBot" E/W : "WBridge5". Playing IMPS
+15:58:45.991 <- North | NORTH ready to start
+15:58:45.991 <- East  | EAST ready to start
+15:58:45.993 <- South | SOUTH ready to start
+15:58:46.008 <- West  | WEST ready to start
+15:58:46.008 -> North | Start of board
+15:58:46.008 -> East  | Start of board
+15:58:46.010 -> South | Start of board
+15:58:46.010 -> West  | Start of board
+15:58:46.018 <- North | NORTH ready for deal
+15:58:46.020 -> North | Board number 1. Dealer NORTH. Neither vulnerable.
+15:58:46.020 <- East  | EAST ready for deal
+15:58:46.020 -> East  | Board number 1. Dealer NORTH. Neither vulnerable.
+15:58:46.020 <- South | SOUTH ready for deal
+15:58:46.020 -> South | Board number 1. Dealer NORTH. Neither vulnerable.
+15:58:46.037 <- West  | WEST ready for deal
+15:58:46.037 -> West  | Board number 1. Dealer NORTH. Neither vulnerable.
+15:58:46.037 <- North | NORTH ready for cards
+15:58:46.039 -> North | North's cards : S 9 3. H A Q J 8 6 3 2. D 9 8. C 5 4.
+15:58:46.039 <- East  | EAST ready for cards
+15:58:46.039 -> East  | East's cards : S A J 6. H K 7. D J 7 4. C K 9 7 6 2.
+15:58:46.039 <- South | SOUTH ready for cards
+15:58:46.039 -> South | South's cards : S K 8 5 4 2. H T 9 5. D Q T 3. C A 8.
+15:58:46.047 <- West  | WEST ready for cards
+15:58:46.047 -> West  | West's cards : S Q T 7. H 4. D A K 6 5 2. C Q J T 3.
+15:58:47.733 <- North | NORTH bids 3H
+15:58:47.733 <- East  | EAST ready for NORTH's bid
+15:58:47.733 -> East  | North bids 3H
+15:58:47.735 <- South | SOUTH ready for NORTH's bid
+15:58:47.735 -> South | North bids 3H
+15:58:47.735 <- West  | WEST ready for NORTH's bid
+15:58:47.735 -> West  | North bids 3H
+15:58:48.681 <- East  | EAST PASSES
+15:58:48.683 <- North | NORTH ready for  EAST's bid
+15:58:48.683 -> North | East passes
+15:58:48.683 <- South | SOUTH ready for  EAST's bid
+15:58:48.683 -> South | East passes
+15:58:48.683 <- West  | WEST ready for  EAST's bid
+15:58:48.683 -> West  | East passes
+15:58:57.393 <- South | SOUTH PASSES
+15:58:57.397 <- North | NORTH ready for SOUTH's bid
+15:58:57.397 -> North | South passes
+15:58:57.397 <- East  | EAST ready for SOUTH's bid
+15:58:57.397 -> East  | South passes
+15:58:57.397 <- West  | WEST ready for SOUTH's bid
+15:58:57.398 -> West  | South passes
+15:58:58.082 <- West  | WEST PASSES
+15:58:58.082 <- North | NORTH ready for  WEST's bid
+15:58:58.082 -> North | West passes
+15:58:58.082 <- East  | EAST ready for  WEST's bid
+15:58:58.083 -> East  | West passes
+15:58:58.083 <- South | SOUTH ready for  WEST's bid
+15:58:58.083 -> South | West passes
+15:58:58.084 -> East  | East to lead
+15:59:07.527 <- East  | EAST plays 4d
+15:59:07.527 <- North | NORTH ready for  EAST's card to trick 1
+15:59:07.527 -> North | East plays 4D
+15:59:07.527 <- South | SOUTH ready for  EAST's card to trick 1
+15:59:07.527 -> South | East plays 4D
+15:59:07.527 <- West  | WEST ready for  EAST's card to trick 1
+15:59:07.527 -> West  | East plays 4D
+15:59:09.373 <- North | NORTH ready for dummy
+15:59:09.373 -> North | Dummy's cards : S K 8 5 4 2. H T 9 5. D Q T 3. C A 8.
+15:59:09.373 <- East  | EAST ready for dummy
+15:59:09.373 -> East  | Dummy's cards : S K 8 5 4 2. H T 9 5. D Q T 3. C A 8.
+15:59:09.376 <- West  | WEST ready for dummy
+15:59:09.376 -> West  | Dummy's cards : S K 8 5 4 2. H T 9 5. D Q T 3. C A 8.
+15:59:11.680 <- North | SOUTH plays qd
+15:59:11.680 <- East  | EAST ready for Dummy's card to trick 1
+15:59:11.680 -> East  | South plays QD
+15:59:11.680 <- South | SOUTH ready for Dummy's card to trick 1
+15:59:11.680 -> South | South plays QD
+15:59:11.680 <- West  | WEST ready for Dummy's card to trick 1
+15:59:11.682 -> West  | South plays QD
+15:59:13.680 <- West  | WEST plays kd
+15:59:13.680 <- North | NORTH ready for  WEST's card to trick 1
+15:59:13.680 -> North | West plays KD
+15:59:13.683 <- East  | EAST ready for  WEST's card to trick 1
+15:59:13.683 -> East  | West plays KD
+15:59:13.683 <- South | SOUTH ready for  WEST's card to trick 1
+15:59:13.684 -> South | West plays KD
+15:59:15.169 <- North | NORTH plays 8d
+15:59:15.169 <- East  | EAST ready for NORTH's card to trick 1
+15:59:15.169 -> East  | North plays 8D
+15:59:15.171 <- South | SOUTH ready for NORTH's card to trick 1
+15:59:15.171 -> South | North plays 8D
+15:59:15.171 <- West  | WEST ready for NORTH's card to trick 1
+15:59:15.171 -> West  | North plays 8D
+15:59:15.171 -> West  | West to lead
+15:59:20.312 <- West  | WEST plays ad
+15:59:20.312 <- North | NORTH ready for  WEST's card to trick 2
+15:59:20.315 -> North | West plays AD
+15:59:20.315 <- East  | EAST ready for  WEST's card to trick 2
+15:59:20.315 -> East  | West plays AD
+15:59:20.315 <- South | SOUTH ready for  WEST's card to trick 2
+15:59:20.315 -> South | West plays AD
+15:59:22.021 <- North | NORTH plays 9d
+15:59:22.021 <- East  | EAST ready for NORTH's card to trick 2
+15:59:22.021 -> East  | North plays 9D
+15:59:22.021 <- South | SOUTH ready for NORTH's card to trick 2
+15:59:22.021 -> South | North plays 9D
+15:59:22.021 <- West  | WEST ready for NORTH's card to trick 2
+15:59:22.021 -> West  | North plays 9D
+15:59:23.288 <- East  | EAST plays 7d
+15:59:23.288 <- North | NORTH ready for  EAST's card to trick 2
+15:59:23.288 -> North | East plays 7D
+15:59:23.288 <- South | SOUTH ready for  EAST's card to trick 2
+15:59:23.288 -> South | East plays 7D
+15:59:23.288 <- West  | WEST ready for  EAST's card to trick 2
+15:59:23.288 -> West  | East plays 7D
+15:59:24.525 <- North | SOUTH plays 3d
+15:59:24.525 <- East  | EAST ready for Dummy's card to trick 2
+15:59:24.525 -> East  | South plays 3D
+15:59:24.525 <- South | SOUTH ready for Dummy's card to trick 2
+15:59:24.525 -> South | South plays 3D
+15:59:24.525 <- West  | WEST ready for Dummy's card to trick 2
+15:59:24.525 -> West  | South plays 3D
+15:59:24.525 -> West  | West to lead
+15:59:26.329 <- West  | WEST plays 2d
+15:59:26.329 <- North | NORTH ready for  WEST's card to trick 3
+15:59:26.329 -> North | West plays 2D
+15:59:26.329 <- East  | EAST ready for  WEST's card to trick 3
+15:59:26.329 -> East  | West plays 2D
+15:59:26.329 <- South | SOUTH ready for  WEST's card to trick 3
+15:59:26.330 -> South | West plays 2D
+15:59:28.891 <- North | NORTH plays 5c
+15:59:28.891 <- East  | EAST ready for NORTH's card to trick 3
+15:59:28.891 -> East  | North plays 5C
+15:59:28.892 <- South | SOUTH ready for NORTH's card to trick 3
+15:59:28.892 -> South | North plays 5C
+15:59:28.892 <- West  | WEST ready for NORTH's card to trick 3
+15:59:28.892 -> West  | North plays 5C
+15:59:30.225 <- East  | EAST plays jd
+15:59:30.225 <- North | NORTH ready for  EAST's card to trick 3
+15:59:30.225 -> North | East plays JD
+15:59:30.225 <- South | SOUTH ready for  EAST's card to trick 3
+15:59:30.225 -> South | East plays JD
+15:59:30.225 <- West  | WEST ready for  EAST's card to trick 3
+15:59:30.225 -> West  | East plays JD
+15:59:32.534 <- North | SOUTH plays td
+15:59:32.534 <- East  | EAST ready for Dummy's card to trick 3
+15:59:32.534 -> East  | South plays TD
+15:59:32.534 <- South | SOUTH ready for Dummy's card to trick 3
+15:59:32.534 -> South | South plays TD
+15:59:32.534 <- West  | WEST ready for Dummy's card to trick 3
+15:59:32.534 -> West  | South plays TD
+15:59:32.536 -> East  | East to lead
+15:59:35.227 <- East  | EAST plays 2c
+15:59:35.227 <- North | NORTH ready for  EAST's card to trick 4
+15:59:35.227 -> North | East plays 2C
+15:59:35.227 <- South | SOUTH ready for  EAST's card to trick 4
+15:59:35.227 -> South | East plays 2C
+15:59:35.227 <- West  | WEST ready for  EAST's card to trick 4
+15:59:35.228 -> West  | East plays 2C
+15:59:36.721 <- North | SOUTH plays ac
+15:59:36.721 <- East  | EAST ready for Dummy's card to trick 4
+15:59:36.721 -> East  | South plays AC
+15:59:36.721 <- South | SOUTH ready for Dummy's card to trick 4
+15:59:36.722 -> South | South plays AC
+15:59:36.722 <- West  | WEST ready for Dummy's card to trick 4
+15:59:36.722 -> West  | South plays AC
+15:59:38.168 <- West  | WEST plays qc
+15:59:38.168 <- North | NORTH ready for  WEST's card to trick 4
+15:59:38.169 -> North | West plays QC
+15:59:38.169 <- East  | EAST ready for  WEST's card to trick 4
+15:59:38.169 -> East  | West plays QC
+15:59:38.169 <- South | SOUTH ready for  WEST's card to trick 4
+15:59:38.169 -> South | West plays QC
+15:59:39.942 <- North | NORTH plays 4c
+15:59:39.942 <- East  | EAST ready for NORTH's card to trick 4
+15:59:39.948 -> East  | North plays 4C
+15:59:39.948 <- South | SOUTH ready for NORTH's card to trick 4
+15:59:39.948 -> South | North plays 4C
+15:59:39.948 <- West  | WEST ready for NORTH's card to trick 4
+15:59:39.948 -> West  | North plays 4C
+15:59:39.948 -> North | Dummy to lead
+15:59:42.250 <- North | SOUTH plays 5h
+15:59:42.250 <- East  | EAST ready for Dummy's card to trick 5
+15:59:42.252 -> East  | South plays 5H
+15:59:42.252 <- South | SOUTH ready for Dummy's card to trick 5
+15:59:42.252 -> South | South plays 5H
+15:59:42.252 <- West  | WEST ready for Dummy's card to trick 5
+15:59:42.252 -> West  | South plays 5H
+15:59:43.908 <- West  | WEST plays 4h
+15:59:43.908 <- North | NORTH ready for  WEST's card to trick 5
+15:59:43.908 -> North | West plays 4H
+15:59:43.908 <- East  | EAST ready for  WEST's card to trick 5
+15:59:43.908 -> East  | West plays 4H
+15:59:43.908 <- South | SOUTH ready for  WEST's card to trick 5
+15:59:43.908 -> South | West plays 4H
+15:59:47.763 <- North | NORTH plays 8h
+15:59:47.763 <- East  | EAST ready for NORTH's card to trick 5
+15:59:47.763 -> East  | North plays 8H
+15:59:47.763 <- South | SOUTH ready for NORTH's card to trick 5
+15:59:47.763 -> South | North plays 8H
+15:59:47.763 <- West  | WEST ready for NORTH's card to trick 5
+15:59:47.763 -> West  | North plays 8H
+15:59:50.153 <- East  | EAST plays kh
+15:59:50.153 <- North | NORTH ready for  EAST's card to trick 5
+15:59:50.153 -> North | East plays KH
+15:59:50.155 <- South | SOUTH ready for  EAST's card to trick 5
+15:59:50.155 -> South | East plays KH
+15:59:50.155 <- West  | WEST ready for  EAST's card to trick 5
+15:59:50.155 -> West  | East plays KH
+15:59:50.155 -> East  | East to lead
+16:00:05.729 <- East  | EAST plays kc
+16:00:05.729 <- North | NORTH ready for  EAST's card to trick 6
+16:00:05.730 -> North | East plays KC
+16:00:05.730 <- South | SOUTH ready for  EAST's card to trick 6
+16:00:05.730 -> South | East plays KC
+16:00:05.730 <- West  | WEST ready for  EAST's card to trick 6
+16:00:05.730 -> West  | East plays KC
+16:00:06.279 <- North | SOUTH plays 8c
+16:00:06.280 <- East  | EAST ready for Dummy's card to trick 6
+16:00:06.280 -> East  | South plays 8C
+16:00:06.280 <- South | SOUTH ready for Dummy's card to trick 6
+16:00:06.280 -> South | South plays 8C
+16:00:06.281 <- West  | WEST ready for Dummy's card to trick 6
+16:00:06.281 -> West  | South plays 8C
+16:00:07.365 <- West  | WEST plays 3c
+16:00:07.365 <- North | NORTH ready for  WEST's card to trick 6
+16:00:07.365 -> North | West plays 3C
+16:00:07.365 <- East  | EAST ready for  WEST's card to trick 6
+16:00:07.365 -> East  | West plays 3C
+16:00:07.366 <- South | SOUTH ready for  WEST's card to trick 6
+16:00:07.366 -> South | West plays 3C
+16:00:09.688 <- North | NORTH plays 3h
+16:00:09.688 <- East  | EAST ready for NORTH's card to trick 6
+16:00:09.688 -> East  | North plays 3H
+16:00:09.688 <- South | SOUTH ready for NORTH's card to trick 6
+16:00:09.688 -> South | North plays 3H
+16:00:09.688 <- West  | WEST ready for NORTH's card to trick 6
+16:00:09.688 -> West  | North plays 3H
+16:00:09.688 -> North | North to lead
+16:00:12.150 <- North | NORTH plays 2h
+16:00:12.150 <- East  | EAST ready for NORTH's card to trick 7
+16:00:12.151 -> East  | North plays 2H
+16:00:12.151 <- South | SOUTH ready for NORTH's card to trick 7
+16:00:12.151 -> South | North plays 2H
+16:00:12.151 <- West  | WEST ready for NORTH's card to trick 7
+16:00:12.151 -> West  | North plays 2H
+16:00:12.701 <- East  | EAST plays 7h
+16:00:12.701 <- North | NORTH ready for  EAST's card to trick 7
+16:00:12.701 -> North | East plays 7H
+16:00:12.701 <- South | SOUTH ready for  EAST's card to trick 7
+16:00:12.701 -> South | East plays 7H
+16:00:12.701 <- West  | WEST ready for  EAST's card to trick 7
+16:00:12.701 -> West  | East plays 7H
+16:00:13.219 <- North | SOUTH plays 9h
+16:00:13.219 <- East  | EAST ready for Dummy's card to trick 7
+16:00:13.219 -> East  | South plays 9H
+16:00:13.219 <- South | SOUTH ready for Dummy's card to trick 7
+16:00:13.221 -> South | South plays 9H
+16:00:13.221 <- West  | WEST ready for Dummy's card to trick 7
+16:00:13.221 -> West  | South plays 9H
+16:00:16.374 <- West  | WEST plays jc
+16:00:16.374 <- North | NORTH ready for  WEST's card to trick 7
+16:00:16.374 -> North | West plays JC
+16:00:16.374 <- East  | EAST ready for  WEST's card to trick 7
+16:00:16.374 -> East  | West plays JC
+16:00:16.374 <- South | SOUTH ready for  WEST's card to trick 7
+16:00:16.374 -> South | West plays JC
+16:00:16.376 -> North | Dummy to lead
+16:00:18.682 <- North | SOUTH plays th
+16:00:18.684 <- East  | EAST ready for Dummy's card to trick 8
+16:00:18.684 -> East  | South plays TH
+16:00:18.684 <- South | SOUTH ready for Dummy's card to trick 8
+16:00:18.684 -> South | South plays TH
+16:00:18.684 <- West  | WEST ready for Dummy's card to trick 8
+16:00:18.686 -> West  | South plays TH
+16:00:20.847 <- West  | WEST plays 5d
+16:00:20.847 <- North | NORTH ready for  WEST's card to trick 8
+16:00:20.847 -> North | West plays 5D
+16:00:20.849 <- East  | EAST ready for  WEST's card to trick 8
+16:00:20.849 -> East  | West plays 5D
+16:00:20.849 <- South | SOUTH ready for  WEST's card to trick 8
+16:00:20.849 -> South | West plays 5D
+16:00:22.140 <- North | NORTH plays qh
+16:00:22.141 <- East  | EAST ready for NORTH's card to trick 8
+16:00:22.141 -> East  | North plays QH
+16:00:22.141 <- South | SOUTH ready for NORTH's card to trick 8
+16:00:22.141 -> South | North plays QH
+16:00:22.141 <- West  | WEST ready for NORTH's card to trick 8
+16:00:22.141 -> West  | North plays QH
+16:00:23.169 <- East  | EAST plays 6c
+16:00:23.169 <- North | NORTH ready for  EAST's card to trick 8
+16:00:23.169 -> North | East plays 6C
+16:00:23.169 <- South | SOUTH ready for  EAST's card to trick 8
+16:00:23.169 -> South | East plays 6C
+16:00:23.169 <- West  | WEST ready for  EAST's card to trick 8
+16:00:23.169 -> West  | East plays 6C
+16:00:23.171 -> North | North to lead
+16:00:23.803 <- North | NORTH plays 3s
+16:00:23.803 <- East  | EAST ready for NORTH's card to trick 9
+16:00:23.803 -> East  | North plays 3S
+16:00:23.803 <- South | SOUTH ready for NORTH's card to trick 9
+16:00:23.803 -> South | North plays 3S
+16:00:23.805 <- West  | WEST ready for NORTH's card to trick 9
+16:00:23.805 -> West  | North plays 3S
+16:00:24.350 <- East  | EAST plays 6s
+16:00:24.352 <- North | NORTH ready for  EAST's card to trick 9
+16:00:24.352 -> North | East plays 6S
+16:00:24.352 <- South | SOUTH ready for  EAST's card to trick 9
+16:00:24.352 -> South | East plays 6S
+16:00:24.352 <- West  | WEST ready for  EAST's card to trick 9
+16:00:24.352 -> West  | East plays 6S
+16:00:24.896 <- North | SOUTH plays ks
+16:00:24.896 <- East  | EAST ready for Dummy's card to trick 9
+16:00:24.896 -> East  | South plays KS
+16:00:24.897 <- South | SOUTH ready for Dummy's card to trick 9
+16:00:24.897 -> South | South plays KS
+16:00:24.897 <- West  | WEST ready for Dummy's card to trick 9
+16:00:24.897 -> West  | South plays KS
+16:00:25.446 <- West  | WEST plays 7s
+16:00:25.446 <- North | NORTH ready for  WEST's card to trick 9
+16:00:25.446 -> North | West plays 7S
+16:00:25.447 <- East  | EAST ready for  WEST's card to trick 9
+16:00:25.447 -> East  | West plays 7S
+16:00:25.447 <- South | SOUTH ready for  WEST's card to trick 9
+16:00:25.447 -> South | West plays 7S
+16:00:25.448 -> North | Dummy to lead
+16:00:26.000 <- North | SOUTH plays 2s
+16:00:26.000 <- East  | EAST ready for Dummy's card to trick 10
+16:00:26.000 -> East  | South plays 2S
+16:00:26.000 <- South | SOUTH ready for Dummy's card to trick 10
+16:00:26.000 -> South | South plays 2S
+16:00:26.000 <- West  | WEST ready for Dummy's card to trick 10
+16:00:26.000 -> West  | South plays 2S
+16:00:26.551 <- West  | WEST plays ts
+16:00:26.551 <- North | NORTH ready for  WEST's card to trick 10
+16:00:26.551 -> North | West plays TS
+16:00:26.551 <- East  | EAST ready for  WEST's card to trick 10
+16:00:26.551 -> East  | West plays TS
+16:00:26.553 <- South | SOUTH ready for  WEST's card to trick 10
+16:00:26.553 -> South | West plays TS
+16:00:27.085 <- North | NORTH plays 9s
+16:00:27.085 <- East  | EAST ready for NORTH's card to trick 10
+16:00:27.087 -> East  | North plays 9S
+16:00:27.087 <- South | SOUTH ready for NORTH's card to trick 10
+16:00:27.087 -> South | North plays 9S
+16:00:27.087 <- West  | WEST ready for NORTH's card to trick 10
+16:00:27.087 -> West  | North plays 9S
+16:00:27.646 <- East  | EAST plays js
+16:00:27.646 <- North | NORTH ready for  EAST's card to trick 10
+16:00:27.646 -> North | East plays JS
+16:00:27.647 <- South | SOUTH ready for  EAST's card to trick 10
+16:00:27.647 -> South | East plays JS
+16:00:27.647 <- West  | WEST ready for  EAST's card to trick 10
+16:00:27.647 -> West  | East plays JS
+16:00:27.647 -> East  | East to lead
+16:00:28.165 <- East  | EAST plays 7c
+16:00:28.165 <- North | NORTH ready for  EAST's card to trick 11
+16:00:28.165 -> North | East plays 7C
+16:00:28.165 <- South | SOUTH ready for  EAST's card to trick 11
+16:00:28.165 -> South | East plays 7C
+16:00:28.167 <- West  | WEST ready for  EAST's card to trick 11
+16:00:28.167 -> West  | East plays 7C
+16:00:28.720 <- North | SOUTH plays 4s
+16:00:28.720 <- East  | EAST ready for Dummy's card to trick 11
+16:00:28.720 -> East  | South plays 4S
+16:00:28.720 <- South | SOUTH ready for Dummy's card to trick 11
+16:00:28.721 -> South | South plays 4S
+16:00:28.721 <- West  | WEST ready for Dummy's card to trick 11
+16:00:28.721 -> West  | South plays 4S
+16:00:29.354 <- West  | WEST plays tc
+16:00:29.354 <- North | NORTH ready for  WEST's card to trick 11
+16:00:29.354 -> North | West plays TC
+16:00:29.354 <- East  | EAST ready for  WEST's card to trick 11
+16:00:29.354 -> East  | West plays TC
+16:00:29.355 <- South | SOUTH ready for  WEST's card to trick 11
+16:00:29.355 -> South | West plays TC
+16:00:29.904 <- North | NORTH plays jh
+16:00:29.904 <- East  | EAST ready for NORTH's card to trick 11
+16:00:29.904 -> East  | North plays JH
+16:00:29.904 <- South | SOUTH ready for NORTH's card to trick 11
+16:00:29.904 -> South | North plays JH
+16:00:29.904 <- West  | WEST ready for NORTH's card to trick 11
+16:00:29.904 -> West  | North plays JH
+16:00:29.905 -> North | North to lead
+16:00:30.446 <- North | NORTH plays 6h
+16:00:30.446 <- East  | EAST ready for NORTH's card to trick 12
+16:00:30.446 -> East  | North plays 6H
+16:00:30.446 <- South | SOUTH ready for NORTH's card to trick 12
+16:00:30.446 -> South | North plays 6H
+16:00:30.447 <- West  | WEST ready for NORTH's card to trick 12
+16:00:30.447 -> West  | North plays 6H
+16:00:30.983 <- East  | EAST plays 9c
+16:00:30.984 <- North | NORTH ready for  EAST's card to trick 12
+16:00:30.984 -> North | East plays 9C
+16:00:30.984 <- South | SOUTH ready for  EAST's card to trick 12
+16:00:30.984 -> South | East plays 9C
+16:00:30.984 <- West  | WEST ready for  EAST's card to trick 12
+16:00:30.984 -> West  | East plays 9C
+16:00:31.530 <- North | SOUTH plays 5s
+16:00:31.532 <- East  | EAST ready for Dummy's card to trick 12
+16:00:31.532 -> East  | South plays 5S
+16:00:31.532 <- South | SOUTH ready for Dummy's card to trick 12
+16:00:31.532 -> South | South plays 5S
+16:00:31.532 <- West  | WEST ready for Dummy's card to trick 12
+16:00:31.533 -> West  | South plays 5S
+16:00:32.108 <- West  | WEST plays 6d
+16:00:32.108 <- North | NORTH ready for  WEST's card to trick 12
+16:00:32.108 -> North | West plays 6D
+16:00:32.108 <- East  | EAST ready for  WEST's card to trick 12
+16:00:32.110 -> East  | West plays 6D
+16:00:32.110 <- South | SOUTH ready for  WEST's card to trick 12
+16:00:32.110 -> South | West plays 6D
+16:00:32.110 -> North | North to lead
+16:00:32.684 <- North | NORTH plays ah
+16:00:32.684 <- East  | EAST ready for NORTH's card to trick 13
+16:00:32.684 -> East  | North plays AH
+16:00:32.684 <- South | SOUTH ready for NORTH's card to trick 13
+16:00:32.684 -> South | North plays AH
+16:00:32.685 <- West  | WEST ready for NORTH's card to trick 13
+16:00:32.685 -> West  | North plays AH
+16:00:33.232 <- East  | EAST plays as
+16:00:33.232 <- North | NORTH ready for  EAST's card to trick 13
+16:00:33.232 -> North | East plays AS
+16:00:33.233 <- South | SOUTH ready for  EAST's card to trick 13
+16:00:33.233 -> South | East plays AS
+16:00:33.233 <- West  | WEST ready for  EAST's card to trick 13
+16:00:33.233 -> West  | East plays AS
+16:00:33.764 <- North | SOUTH plays 8s
+16:00:33.764 <- East  | EAST ready for Dummy's card to trick 13
+16:00:33.764 -> East  | South plays 8S
+16:00:33.765 <- South | SOUTH ready for Dummy's card to trick 13
+16:00:33.765 -> South | South plays 8S
+16:00:33.765 <- West  | WEST ready for Dummy's card to trick 13
+16:00:33.765 -> West  | South plays 8S
+16:00:34.335 <- West  | WEST plays qs
+16:00:34.335 <- North | NORTH ready for  WEST's card to trick 13
+16:00:34.335 -> North | West plays QS
+16:00:34.335 <- East  | EAST ready for  WEST's card to trick 13
+16:00:34.335 -> East  | West plays QS
+16:00:34.335 <- South | SOUTH ready for  WEST's card to trick 13
+16:00:34.335 -> South | West plays QS
+16:00:34.335 -> North | Timing - N/S : this board  0:00,  total  0:00.  E/W : this board  0:00,  total  0:00.
+16:00:34.335 -> East  | Timing - N/S : this board  0:00,  total  0:00.  E/W : this board  0:00,  total  0:00.
+16:00:34.335 -> South | Timing - N/S : this board  0:00,  total  0:00.  E/W : this board  0:00,  total  0:00.
+16:00:34.335 -> West  | Timing - N/S : this board  0:00,  total  0:00.  E/W : this board  0:00,  total  0:00.
+16:00:34.339 -> North | Start of board
+16:00:34.339 -> East  | Start of board
+16:00:34.339 -> South | Start of board
+16:00:34.339 -> West  | Start of board
+16:00:41.328 <- North | NORTH ready for deal
+16:00:41.328 -> North | Board number 2. Dealer EAST. N/S vulnerable.
+16:00:41.328 <- East  | EAST ready for deal
+16:00:41.328 -> East  | Board number 2. Dealer EAST. N/S vulnerable.
+16:00:41.328 <- South | SOUTH ready for deal
+16:00:41.328 -> South | Board number 2. Dealer EAST. N/S vulnerable.
+16:00:41.328 <- West  | WEST ready for deal
+16:00:41.328 -> West  | Board number 2. Dealer EAST. N/S vulnerable.
+16:00:41.357 <- North | NORTH ready for cards
+16:00:41.357 -> North | North's cards : S K 3. H Q T 7 3. D K T 8 3. C A 5 3.
+16:00:41.357 <- East  | EAST ready for cards
+16:00:41.357 -> East  | East's cards : S A J 4. H 8 4. D A 9 5 4. C K J 9 8.
+16:00:41.357 <- South | SOUTH ready for cards
+16:00:41.357 -> South | South's cards : S Q 9 8 6 2. H K 5. D 7 6. C Q T 7 4.
+16:00:41.357 <- West  | WEST ready for cards
+16:00:41.357 -> West  | West's cards : S T 7 5. H A J 9 6 2. D Q J 2. C 6 2.
+16:00:42.751 <- East  | EAST bids 1D
+16:00:42.751 <- North | NORTH ready for  EAST's bid
+16:00:42.751 -> North | East bids 1D
+16:00:42.751 <- South | SOUTH ready for  EAST's bid
+16:00:42.751 -> South | East bids 1D
+16:00:42.751 <- West  | WEST ready for  EAST's bid
+16:00:42.751 -> West  | East bids 1D
+16:00:43.296 <- South | SOUTH bids 1S
+16:00:43.296 <- North | NORTH ready for SOUTH's bid
+16:00:43.296 -> North | South bids 1S
+16:00:43.298 <- East  | EAST ready for SOUTH's bid
+16:00:43.298 -> East  | South bids 1S
+16:00:43.298 <- West  | WEST ready for SOUTH's bid
+16:00:43.298 -> West  | South bids 1S
+16:00:43.828 <- West  | WEST bids 2D Alert.
+16:00:43.829 <- North | NORTH ready for  WEST's bid
+16:00:43.829 -> North | West bids 2D Alert.
+16:00:43.829 <- East  | EAST ready for  WEST's bid
+16:00:43.829 -> East  | West bids 2D Alert.
+16:00:43.829 <- South | SOUTH ready for  WEST's bid
+16:00:43.829 -> South | West bids 2D Alert.
+16:05:37.354 <- North | NORTH PASSES
+16:05:37.355 <- East  | EAST ready for NORTH's bid
+16:05:37.356 -> East  | North passes
+16:05:37.356 <- South | SOUTH ready for NORTH's bid
+16:05:37.356 -> South | North passes
+16:05:37.356 <- West  | WEST ready for NORTH's bid
+16:05:37.356 -> West  | North passes
+16:05:39.910 <- East  | EAST bids 2H
+16:05:39.911 <- North | NORTH ready for  EAST's bid
+16:05:39.911 -> North | East bids 2H
+16:05:39.911 <- South | SOUTH ready for  EAST's bid
+16:05:39.911 -> South | East bids 2H
+16:05:39.912 <- West  | WEST ready for  EAST's bid
+16:05:39.912 -> West  | East bids 2H
+16:05:42.458 <- South | SOUTH PASSES
+16:05:42.459 <- North | NORTH ready for SOUTH's bid
+16:05:42.459 -> North | South passes
+16:05:42.459 <- East  | EAST ready for SOUTH's bid
+16:05:42.459 -> East  | South passes
+16:05:42.459 <- West  | WEST ready for SOUTH's bid
+16:05:42.459 -> West  | South passes
+16:05:44.342 <- West  | WEST PASSES
+16:05:44.342 <- North | NORTH ready for  WEST's bid
+16:05:44.342 -> North | West passes
+16:05:44.342 <- East  | EAST ready for  WEST's bid
+16:05:44.342 -> East  | West passes
+16:05:44.342 <- South | SOUTH ready for  WEST's bid
+16:05:44.342 -> South | West passes
+16:05:55.962 <- North | NORTH PASSES
+16:05:55.962 <- East  | EAST ready for NORTH's bid
+16:05:55.962 -> East  | North passes
+16:05:55.963 <- South | SOUTH ready for NORTH's bid
+16:05:55.963 -> South | North passes
+16:05:55.963 <- West  | WEST ready for NORTH's bid
+16:05:55.963 -> West  | North passes
+16:05:55.963 -> South | South to lead
+16:06:01.090 <- South | SOUTH plays 9s
+16:06:01.090 <- North | NORTH ready for SOUTH's card to trick 1
+16:06:01.090 -> North | South plays 9S
+16:06:01.090 <- East  | EAST ready for SOUTH's card to trick 1
+16:06:01.090 -> East  | South plays 9S
+16:06:01.090 <- West  | WEST ready for SOUTH's card to trick 1
+16:06:01.090 -> West  | South plays 9S
+16:06:01.139 <- North | NORTH ready for dummy
+16:06:01.139 -> North | Dummy's cards : S T 7 5. H A J 9 6 2. D Q J 2. C 6 2.
+16:06:01.139 <- East  | EAST ready for dummy
+16:06:01.139 -> East  | Dummy's cards : S T 7 5. H A J 9 6 2. D Q J 2. C 6 2.
+16:06:01.140 <- South | SOUTH ready for dummy
+16:06:01.140 -> South | Dummy's cards : S T 7 5. H A J 9 6 2. D Q J 2. C 6 2.
+16:06:19.518 <- East  | WEST plays 5s
+16:06:19.518 <- North | NORTH ready for Dummy's card to trick 1
+16:06:19.518 -> North | West plays 5S
+16:06:19.518 <- South | SOUTH ready for Dummy's card to trick 1
+16:06:19.518 -> South | West plays 5S
+16:06:19.518 <- West  | WEST ready for Dummy's card to trick 1
+16:06:19.518 -> West  | West plays 5S
+16:06:23.914 <- North | NORTH plays ks
+16:06:23.914 <- East  | EAST ready for NORTH's card to trick 1
+16:06:23.914 -> East  | North plays KS
+16:06:23.914 <- South | SOUTH ready for NORTH's card to trick 1
+16:06:23.915 -> South | North plays KS
+16:06:23.915 <- West  | WEST ready for NORTH's card to trick 1
+16:06:23.915 -> West  | North plays KS
+16:06:32.866 <- East  | EAST plays as
+16:06:32.866 <- North | NORTH ready for  EAST's card to trick 1
+16:06:32.866 -> North | East plays AS
+16:06:32.866 <- South | SOUTH ready for  EAST's card to trick 1
+16:06:32.868 -> South | East plays AS
+16:06:32.868 <- West  | WEST ready for  EAST's card to trick 1
+16:06:32.868 -> West  | East plays AS
+16:06:32.868 -> East  | East to lead
+16:06:45.546 <- East  | EAST plays 4h
+16:06:45.546 <- North | NORTH ready for  EAST's card to trick 2
+16:06:45.546 -> North | East plays 4H
+16:06:45.546 <- South | SOUTH ready for  EAST's card to trick 2
+16:06:45.546 -> South | East plays 4H
+16:06:45.546 <- West  | WEST ready for  EAST's card to trick 2
+16:06:45.546 -> West  | East plays 4H
+16:06:47.969 <- South | SOUTH plays 5h
+16:06:47.969 <- North | NORTH ready for SOUTH's card to trick 2
+16:06:47.969 -> North | South plays 5H
+16:06:47.969 <- East  | EAST ready for SOUTH's card to trick 2
+16:06:47.969 -> East  | South plays 5H
+16:06:47.969 <- West  | WEST ready for SOUTH's card to trick 2
+16:06:47.969 -> West  | South plays 5H
+16:06:52.801 <- East  | WEST plays jh
+16:06:52.801 <- North | NORTH ready for Dummy's card to trick 2
+16:06:52.801 -> North | West plays JH
+16:06:52.802 <- South | SOUTH ready for Dummy's card to trick 2
+16:06:52.802 -> South | West plays JH
+16:06:52.802 <- West  | WEST ready for Dummy's card to trick 2
+16:06:52.802 -> West  | West plays JH
+16:06:53.819 <- North | NORTH plays qh
+16:06:53.819 <- East  | EAST ready for NORTH's card to trick 2
+16:06:53.819 -> East  | North plays QH
+16:06:53.819 <- South | SOUTH ready for NORTH's card to trick 2
+16:06:53.819 -> South | North plays QH
+16:06:53.819 <- West  | WEST ready for NORTH's card to trick 2
+16:06:53.819 -> West  | North plays QH
+16:06:53.819 -> North | North to lead
+16:06:55.793 <- North | NORTH plays 3s
+16:06:55.793 <- East  | EAST ready for NORTH's card to trick 3
+16:06:55.793 -> East  | North plays 3S
+16:06:55.793 <- South | SOUTH ready for NORTH's card to trick 3
+16:06:55.793 -> South | North plays 3S
+16:06:55.793 <- West  | WEST ready for NORTH's card to trick 3
+16:06:55.793 -> West  | North plays 3S
+16:06:57.127 <- East  | EAST plays js
+16:06:57.128 <- North | NORTH ready for  EAST's card to trick 3
+16:06:57.128 -> North | East plays JS
+16:06:57.128 <- South | SOUTH ready for  EAST's card to trick 3
+16:06:57.128 -> South | East plays JS
+16:06:57.128 <- West  | WEST ready for  EAST's card to trick 3
+16:06:57.128 -> West  | East plays JS
+16:06:57.670 <- South | SOUTH plays qs
+16:06:57.670 <- North | NORTH ready for SOUTH's card to trick 3
+16:06:57.670 -> North | South plays QS
+16:06:57.670 <- East  | EAST ready for SOUTH's card to trick 3
+16:06:57.670 -> East  | South plays QS
+16:06:57.670 <- West  | WEST ready for SOUTH's card to trick 3
+16:06:57.670 -> West  | South plays QS
+16:06:58.927 <- East  | WEST plays 7s
+16:06:58.928 <- North | NORTH ready for Dummy's card to trick 3
+16:06:58.928 -> North | West plays 7S
+16:06:58.928 <- South | SOUTH ready for Dummy's card to trick 3
+16:06:58.928 -> South | West plays 7S
+16:06:58.928 <- West  | WEST ready for Dummy's card to trick 3
+16:06:58.928 -> West  | West plays 7S
+16:06:58.928 -> South | South to lead
+16:06:59.521 <- South | SOUTH plays 2s
+16:06:59.521 <- North | NORTH ready for SOUTH's card to trick 4
+16:06:59.522 -> North | South plays 2S
+16:06:59.522 <- East  | EAST ready for SOUTH's card to trick 4
+16:06:59.522 -> East  | South plays 2S
+16:06:59.522 <- West  | WEST ready for SOUTH's card to trick 4
+16:06:59.522 -> West  | South plays 2S
+16:07:00.084 <- East  | WEST plays ts
+16:07:00.084 <- North | NORTH ready for Dummy's card to trick 4
+16:07:00.084 -> North | West plays TS
+16:07:00.084 <- South | SOUTH ready for Dummy's card to trick 4
+16:07:00.084 -> South | West plays TS
+16:07:00.086 <- West  | WEST ready for Dummy's card to trick 4
+16:07:00.086 -> West  | West plays TS
+16:07:00.633 <- North | NORTH plays 3h
+16:07:00.633 <- East  | EAST ready for NORTH's card to trick 4
+16:07:00.633 -> East  | North plays 3H
+16:07:00.634 <- South | SOUTH ready for NORTH's card to trick 4
+16:07:00.634 -> South | North plays 3H
+16:07:00.634 <- West  | WEST ready for NORTH's card to trick 4
+16:07:00.634 -> West  | North plays 3H
+16:07:01.186 <- East  | EAST plays 4s
+16:07:01.186 <- North | NORTH ready for  EAST's card to trick 4
+16:07:01.186 -> North | East plays 4S
+16:07:01.187 <- South | SOUTH ready for  EAST's card to trick 4
+16:07:01.187 -> South | East plays 4S
+16:07:01.187 <- West  | WEST ready for  EAST's card to trick 4
+16:07:01.187 -> West  | East plays 4S
+16:07:01.187 -> North | North to lead
+16:07:01.750 <- North | NORTH plays 3c
+16:07:01.750 <- East  | EAST ready for NORTH's card to trick 5
+16:07:01.750 -> East  | North plays 3C
+16:07:01.751 <- South | SOUTH ready for NORTH's card to trick 5
+16:07:01.751 -> South | North plays 3C
+16:07:01.751 <- West  | WEST ready for NORTH's card to trick 5
+16:07:01.751 -> West  | North plays 3C
+16:07:02.314 <- East  | EAST plays 9c
+16:07:02.314 <- North | NORTH ready for  EAST's card to trick 5
+16:07:02.314 -> North | East plays 9C
+16:07:02.314 <- South | SOUTH ready for  EAST's card to trick 5
+16:07:02.314 -> South | East plays 9C
+16:07:02.315 <- West  | WEST ready for  EAST's card to trick 5
+16:07:02.315 -> West  | East plays 9C
+16:07:02.886 <- South | SOUTH plays tc
+16:07:02.886 <- North | NORTH ready for SOUTH's card to trick 5
+16:07:02.886 -> North | South plays TC
+16:07:02.886 <- East  | EAST ready for SOUTH's card to trick 5
+16:07:02.886 -> East  | South plays TC
+16:07:02.886 <- West  | WEST ready for SOUTH's card to trick 5
+16:07:02.886 -> West  | South plays TC
+16:07:03.440 <- East  | WEST plays 2c
+16:07:03.440 <- North | NORTH ready for Dummy's card to trick 5
+16:07:03.440 -> North | West plays 2C
+16:07:03.442 <- South | SOUTH ready for Dummy's card to trick 5
+16:07:03.442 -> South | West plays 2C
+16:07:03.442 <- West  | WEST ready for Dummy's card to trick 5
+16:07:03.442 -> West  | West plays 2C
+16:07:03.442 -> South | South to lead
+16:07:21.552 <- South | SOUTH plays 4c
+16:07:21.552 <- North | NORTH ready for SOUTH's card to trick 6
+16:07:21.552 -> North | South plays 4C
+16:07:21.552 <- East  | EAST ready for SOUTH's card to trick 6
+16:07:21.552 -> East  | South plays 4C
+16:07:21.552 <- West  | WEST ready for SOUTH's card to trick 6
+16:07:21.554 -> West  | South plays 4C
+16:07:22.112 <- East  | WEST plays 6c
+16:07:22.112 <- North | NORTH ready for Dummy's card to trick 6
+16:07:22.112 -> North | West plays 6C
+16:07:22.112 <- South | SOUTH ready for Dummy's card to trick 6
+16:07:22.112 -> South | West plays 6C
+16:07:22.112 <- West  | WEST ready for Dummy's card to trick 6
+16:07:22.112 -> West  | West plays 6C
+16:07:22.676 <- North | NORTH plays ac
+16:07:22.676 <- East  | EAST ready for NORTH's card to trick 6
+16:07:22.676 -> East  | North plays AC
+16:07:22.676 <- South | SOUTH ready for NORTH's card to trick 6
+16:07:22.677 -> South | North plays AC
+16:07:22.677 <- West  | WEST ready for NORTH's card to trick 6
+16:07:22.677 -> West  | North plays AC
+16:07:23.259 <- East  | EAST plays jc
+16:07:23.260 <- North | NORTH ready for  EAST's card to trick 6
+16:07:23.260 -> North | East plays JC
+16:07:23.260 <- South | SOUTH ready for  EAST's card to trick 6
+16:07:23.260 -> South | East plays JC
+16:07:23.260 <- West  | WEST ready for  EAST's card to trick 6
+16:07:23.260 -> West  | East plays JC
+16:07:23.260 -> North | North to lead
+16:07:28.355 <- North | NORTH plays 5c
+16:07:28.355 <- East  | EAST ready for NORTH's card to trick 7
+16:07:28.355 -> East  | North plays 5C
+16:07:28.356 <- South | SOUTH ready for NORTH's card to trick 7
+16:07:28.356 -> South | North plays 5C
+16:07:28.356 <- West  | WEST ready for NORTH's card to trick 7
+16:07:28.356 -> West  | North plays 5C
+16:07:30.198 <- East  | EAST plays kc
+16:07:30.198 <- North | NORTH ready for  EAST's card to trick 7
+16:07:30.198 -> North | East plays KC
+16:07:30.198 <- South | SOUTH ready for  EAST's card to trick 7
+16:07:30.198 -> South | East plays KC
+16:07:30.198 <- West  | WEST ready for  EAST's card to trick 7
+16:07:30.198 -> West  | East plays KC
+16:07:31.261 <- South | SOUTH plays 7c
+16:07:31.261 <- North | NORTH ready for SOUTH's card to trick 7
+16:07:31.261 -> North | South plays 7C
+16:07:31.261 <- East  | EAST ready for SOUTH's card to trick 7
+16:07:31.261 -> East  | South plays 7C
+16:07:31.261 <- West  | WEST ready for SOUTH's card to trick 7
+16:07:31.261 -> West  | South plays 7C
+16:07:33.065 <- East  | WEST plays 2d
+16:07:33.065 <- North | NORTH ready for Dummy's card to trick 7
+16:07:33.065 -> North | West plays 2D
+16:07:33.065 <- South | SOUTH ready for Dummy's card to trick 7
+16:07:33.065 -> South | West plays 2D
+16:07:33.065 <- West  | WEST ready for Dummy's card to trick 7
+16:07:33.065 -> West  | West plays 2D
+16:07:33.065 -> East  | East to lead
+16:07:34.281 <- East  | EAST plays 8h
+16:07:34.281 <- North | NORTH ready for  EAST's card to trick 8
+16:07:34.281 -> North | East plays 8H
+16:07:34.292 <- South | SOUTH ready for  EAST's card to trick 8
+16:07:34.292 -> South | East plays 8H
+16:07:34.292 <- West  | WEST ready for  EAST's card to trick 8
+16:07:34.292 -> West  | East plays 8H
+16:07:34.830 <- South | SOUTH plays kh
+16:07:34.830 <- North | NORTH ready for SOUTH's card to trick 8
+16:07:34.832 -> North | South plays KH
+16:07:34.832 <- East  | EAST ready for SOUTH's card to trick 8
+16:07:34.832 -> East  | South plays KH
+16:07:34.832 <- West  | WEST ready for SOUTH's card to trick 8
+16:07:34.832 -> West  | South plays KH
+16:07:35.384 <- East  | WEST plays ah
+16:07:35.384 <- North | NORTH ready for Dummy's card to trick 8
+16:07:35.384 -> North | West plays AH
+16:07:35.384 <- South | SOUTH ready for Dummy's card to trick 8
+16:07:35.384 -> South | West plays AH
+16:07:35.384 <- West  | WEST ready for Dummy's card to trick 8
+16:07:35.384 -> West  | West plays AH
+16:07:35.939 <- North | NORTH plays 7h
+16:07:35.939 <- East  | EAST ready for NORTH's card to trick 8
+16:07:35.939 -> East  | North plays 7H
+16:07:35.939 <- South | SOUTH ready for NORTH's card to trick 8
+16:07:35.939 -> South | North plays 7H
+16:07:35.939 <- West  | WEST ready for NORTH's card to trick 8
+16:07:35.939 -> West  | North plays 7H
+16:07:35.939 -> East  | Dummy to lead
+16:07:36.477 <- East  | WEST plays qd
+16:07:36.477 <- North | NORTH ready for Dummy's card to trick 9
+16:07:36.477 -> North | West plays QD
+16:07:36.477 <- South | SOUTH ready for Dummy's card to trick 9
+16:07:36.477 -> South | West plays QD
+16:07:36.477 <- West  | WEST ready for Dummy's card to trick 9
+16:07:36.477 -> West  | West plays QD
+16:07:37.033 <- North | NORTH plays 3d
+16:07:37.033 <- East  | EAST ready for NORTH's card to trick 9
+16:07:37.033 -> East  | North plays 3D
+16:07:37.033 <- South | SOUTH ready for NORTH's card to trick 9
+16:07:37.033 -> South | North plays 3D
+16:07:37.033 <- West  | WEST ready for NORTH's card to trick 9
+16:07:37.033 -> West  | North plays 3D
+16:07:37.574 <- East  | EAST plays 4d
+16:07:37.574 <- North | NORTH ready for  EAST's card to trick 9
+16:07:37.574 -> North | East plays 4D
+16:07:37.574 <- South | SOUTH ready for  EAST's card to trick 9
+16:07:37.574 -> South | East plays 4D
+16:07:37.574 <- West  | WEST ready for  EAST's card to trick 9
+16:07:37.574 -> West  | East plays 4D
+16:07:38.149 <- South | SOUTH plays 6d
+16:07:38.149 <- North | NORTH ready for SOUTH's card to trick 9
+16:07:38.149 -> North | South plays 6D
+16:07:38.149 <- East  | EAST ready for SOUTH's card to trick 9
+16:07:38.149 -> East  | South plays 6D
+16:07:38.149 <- West  | WEST ready for SOUTH's card to trick 9
+16:07:38.149 -> West  | South plays 6D
+16:07:38.149 -> East  | Dummy to lead
+16:07:38.695 <- East  | WEST plays jd
+16:07:38.695 <- North | NORTH ready for Dummy's card to trick 10
+16:07:38.695 -> North | West plays JD
+16:07:38.695 <- South | SOUTH ready for Dummy's card to trick 10
+16:07:38.695 -> South | West plays JD
+16:07:38.698 <- West  | WEST ready for Dummy's card to trick 10
+16:07:38.698 -> West  | West plays JD
+16:07:39.271 <- North | NORTH plays 8d
+16:07:39.271 <- East  | EAST ready for NORTH's card to trick 10
+16:07:39.271 -> East  | North plays 8D
+16:07:39.271 <- South | SOUTH ready for NORTH's card to trick 10
+16:07:39.271 -> South | North plays 8D
+16:07:39.271 <- West  | WEST ready for NORTH's card to trick 10
+16:07:39.271 -> West  | North plays 8D
+16:07:39.810 <- East  | EAST plays ad
+16:07:39.810 <- North | NORTH ready for  EAST's card to trick 10
+16:07:39.810 -> North | East plays AD
+16:07:39.810 <- South | SOUTH ready for  EAST's card to trick 10
+16:07:39.810 -> South | East plays AD
+16:07:39.812 <- West  | WEST ready for  EAST's card to trick 10
+16:07:39.812 -> West  | East plays AD
+16:07:40.377 <- South | SOUTH plays 7d
+16:07:40.377 <- North | NORTH ready for SOUTH's card to trick 10
+16:07:40.377 -> North | South plays 7D
+16:07:40.377 <- East  | EAST ready for SOUTH's card to trick 10
+16:07:40.377 -> East  | South plays 7D
+16:07:40.377 <- West  | WEST ready for SOUTH's card to trick 10
+16:07:40.377 -> West  | South plays 7D
+16:07:40.377 -> East  | East to lead
+16:07:40.926 <- East  | EAST plays 8c
+16:07:40.926 <- North | NORTH ready for  EAST's card to trick 11
+16:07:40.926 -> North | East plays 8C
+16:07:40.926 <- South | SOUTH ready for  EAST's card to trick 11
+16:07:40.926 -> South | East plays 8C
+16:07:40.926 <- West  | WEST ready for  EAST's card to trick 11
+16:07:40.926 -> West  | East plays 8C
+16:07:41.464 <- South | SOUTH plays qc
+16:07:41.464 <- North | NORTH ready for SOUTH's card to trick 11
+16:07:41.464 -> North | South plays QC
+16:07:41.464 <- East  | EAST ready for SOUTH's card to trick 11
+16:07:41.465 -> East  | South plays QC
+16:07:41.465 <- West  | WEST ready for SOUTH's card to trick 11
+16:07:41.465 -> West  | South plays QC
+16:07:42.016 <- East  | WEST plays 2h
+16:07:42.016 <- North | NORTH ready for Dummy's card to trick 11
+16:07:42.016 -> North | West plays 2H
+16:07:42.016 <- South | SOUTH ready for Dummy's card to trick 11
+16:07:42.016 -> South | West plays 2H
+16:07:42.016 <- West  | WEST ready for Dummy's card to trick 11
+16:07:42.016 -> West  | West plays 2H
+16:07:42.590 <- North | NORTH plays td
+16:07:42.590 <- East  | EAST ready for NORTH's card to trick 11
+16:07:42.590 -> East  | North plays TD
+16:07:42.590 <- South | SOUTH ready for NORTH's card to trick 11
+16:07:42.590 -> South | North plays TD
+16:07:42.590 <- West  | WEST ready for NORTH's card to trick 11
+16:07:42.590 -> West  | North plays TD
+16:07:42.590 -> East  | Dummy to lead
+16:07:43.142 <- East  | WEST plays 6h
+16:07:43.142 <- North | NORTH ready for Dummy's card to trick 12
+16:07:43.142 -> North | West plays 6H
+16:07:43.144 <- South | SOUTH ready for Dummy's card to trick 12
+16:07:43.144 -> South | West plays 6H
+16:07:43.144 <- West  | WEST ready for Dummy's card to trick 12
+16:07:43.144 -> West  | West plays 6H
+16:07:43.713 <- North | NORTH plays th
+16:07:43.714 <- East  | EAST ready for NORTH's card to trick 12
+16:07:43.714 -> East  | North plays TH
+16:07:43.714 <- South | SOUTH ready for NORTH's card to trick 12
+16:07:43.714 -> South | North plays TH
+16:07:43.714 <- West  | WEST ready for NORTH's card to trick 12
+16:07:43.714 -> West  | North plays TH
+16:07:44.267 <- East  | EAST plays 9d
+16:07:44.267 <- North | NORTH ready for  EAST's card to trick 12
+16:07:44.267 -> North | East plays 9D
+16:07:44.269 <- South | SOUTH ready for  EAST's card to trick 12
+16:07:44.269 -> South | East plays 9D
+16:07:44.269 <- West  | WEST ready for  EAST's card to trick 12
+16:07:44.269 -> West  | East plays 9D
+16:07:44.798 <- South | SOUTH plays 6s
+16:07:44.799 <- North | NORTH ready for SOUTH's card to trick 12
+16:07:44.799 -> North | South plays 6S
+16:07:44.799 <- East  | EAST ready for SOUTH's card to trick 12
+16:07:44.799 -> East  | South plays 6S
+16:07:44.799 <- West  | WEST ready for SOUTH's card to trick 12
+16:07:44.799 -> West  | South plays 6S
+16:07:44.799 -> North | North to lead
+16:07:45.361 <- North | NORTH plays kd
+16:07:45.361 <- East  | EAST ready for NORTH's card to trick 13
+16:07:45.361 -> East  | North plays KD
+16:07:45.361 <- South | SOUTH ready for NORTH's card to trick 13
+16:07:45.361 -> South | North plays KD
+16:07:45.361 <- West  | WEST ready for NORTH's card to trick 13
+16:07:45.361 -> West  | North plays KD
+16:07:45.925 <- East  | EAST plays 5d
+16:07:45.925 <- North | NORTH ready for  EAST's card to trick 13
+16:07:45.925 -> North | East plays 5D
+16:07:45.925 <- South | SOUTH ready for  EAST's card to trick 13
+16:07:45.925 -> South | East plays 5D
+16:07:45.925 <- West  | WEST ready for  EAST's card to trick 13
+16:07:45.925 -> West  | East plays 5D
+16:07:46.489 <- South | SOUTH plays 8s
+16:07:46.489 <- North | NORTH ready for SOUTH's card to trick 13
+16:07:46.489 -> North | South plays 8S
+16:07:46.489 <- East  | EAST ready for SOUTH's card to trick 13
+16:07:46.489 -> East  | South plays 8S
+16:07:46.491 <- West  | WEST ready for SOUTH's card to trick 13
+16:07:46.491 -> West  | South plays 8S
+16:07:47.047 <- East  | WEST plays 9h
+16:07:47.047 <- North | NORTH ready for Dummy's card to trick 13
+16:07:47.047 -> North | West plays 9H
+16:07:47.047 <- South | SOUTH ready for Dummy's card to trick 13
+16:07:47.047 -> South | West plays 9H
+16:07:47.048 <- West  | WEST ready for Dummy's card to trick 13
+16:07:47.048 -> West  | West plays 9H
+16:07:47.048 -> North | Timing - N/S : this board  0:00,  total  0:00.  E/W : this board  0:00,  total  0:00.
+16:07:47.048 -> East  | Timing - N/S : this board  0:00,  total  0:00.  E/W : this board  0:00,  total  0:00.
+16:07:47.048 -> South | Timing - N/S : this board  0:00,  total  0:00.  E/W : this board  0:00,  total  0:00.
+16:07:47.048 -> West  | Timing - N/S : this board  0:00,  total  0:00.  E/W : this board  0:00,  total  0:00.
+16:07:47.050 -> North | Start of board
+16:07:47.050 -> East  | Start of board
+16:07:47.050 -> South | Start of board
+16:07:47.050 -> West  | Start of board
+16:07:53.645 <- North | NORTH ready for deal
+16:07:53.645 -> North | Board number 3. Dealer SOUTH. E/W vulnerable.
+16:07:53.646 <- East  | EAST ready for deal
+16:07:53.646 -> East  | Board number 3. Dealer SOUTH. E/W vulnerable.
+16:07:53.662 <- South | SOUTH ready for deal
+16:07:53.662 -> South | Board number 3. Dealer SOUTH. E/W vulnerable.
+16:07:53.662 <- West  | WEST ready for deal
+16:07:53.662 -> West  | Board number 3. Dealer SOUTH. E/W vulnerable.
+16:07:53.665 <- North | NORTH ready for cards
+16:07:53.665 -> North | North's cards : S A 8 2. H 5 3. D K 9 5 2. C 9 6 5 2.
+16:07:53.665 <- East  | EAST ready for cards
+16:07:53.665 -> East  | East's cards : S Q T 9 3. H Q J 9 8 4. D T 7. C K J.
+16:07:53.676 <- South | SOUTH ready for cards
+16:07:53.676 -> South | South's cards : S K J 5 4. H A K 6. D A J 8 6. C T 8.
+16:07:53.676 <- West  | WEST ready for cards
+16:07:53.676 -> West  | West's cards : S 7 6. H T 7 2. D Q 4 3. C A Q 7 4 3.
+16:07:55.009 <- South | SOUTH bids 1NT
+16:07:55.012 <- North | NORTH ready for SOUTH's bid
+16:07:55.012 -> North | South bids 1NT
+16:07:55.012 <- East  | EAST ready for SOUTH's bid
+16:07:55.012 -> East  | South bids 1NT
+16:07:55.013 <- West  | WEST ready for SOUTH's bid
+16:07:55.013 -> West  | South bids 1NT
+16:07:55.547 <- West  | WEST PASSES
+16:07:55.548 <- North | NORTH ready for  WEST's bid
+16:07:55.548 -> North | West passes
+16:07:55.548 <- East  | EAST ready for  WEST's bid
+16:07:55.548 -> East  | West passes
+16:07:55.548 <- South | SOUTH ready for  WEST's bid
+16:07:55.548 -> South | West passes
+16:07:56.511 <- North | NORTH PASSES
+16:07:56.513 <- East  | EAST ready for NORTH's bid
+16:07:56.513 -> East  | North passes
+16:07:56.513 <- South | SOUTH ready for NORTH's bid
+16:07:56.513 -> South | North passes
+16:07:56.514 <- West  | WEST ready for NORTH's bid
+16:07:56.514 -> West  | North passes
+16:07:57.057 <- East  | EAST bids 2C
+16:07:57.057 <- North | NORTH ready for  EAST's bid
+16:07:57.057 -> North | East bids 2C
+16:07:57.057 <- South | SOUTH ready for  EAST's bid
+16:07:57.057 -> South | East bids 2C
+16:07:57.057 <- West  | WEST ready for  EAST's bid
+16:07:57.057 -> West  | East bids 2C
+16:07:59.340 <- South | SOUTH PASSES
+16:07:59.340 <- North | NORTH ready for SOUTH's bid
+16:07:59.340 -> North | South passes
+16:07:59.340 <- East  | EAST ready for SOUTH's bid
+16:07:59.340 -> East  | South passes
+16:07:59.342 <- West  | WEST ready for SOUTH's bid
+16:07:59.342 -> West  | South passes
+16:08:01.151 <- West  | WEST bids 2H
+16:08:01.151 <- North | NORTH ready for  WEST's bid
+16:08:01.151 -> North | West bids 2H
+16:08:01.151 <- East  | EAST ready for  WEST's bid
+16:08:01.151 -> East  | West bids 2H
+16:08:01.151 <- South | SOUTH ready for  WEST's bid
+16:08:01.151 -> South | West bids 2H
+16:08:09.110 <- North | NORTH PASSES
+16:08:09.110 <- East  | EAST ready for NORTH's bid
+16:08:09.110 -> East  | North passes
+16:08:09.110 <- South | SOUTH ready for NORTH's bid
+16:08:09.110 -> South | North passes
+16:08:09.110 <- West  | WEST ready for NORTH's bid
+16:08:09.110 -> West  | North passes
+16:08:10.803 <- East  | EAST PASSES
+16:08:10.803 <- North | NORTH ready for  EAST's bid
+16:08:10.803 -> North | East passes
+16:08:10.805 <- South | SOUTH ready for  EAST's bid
+16:08:10.805 -> South | East passes
+16:08:10.805 <- West  | WEST ready for  EAST's bid
+16:08:10.805 -> West  | East passes
+16:08:19.990 <- South | SOUTH PASSES
+16:08:19.990 <- North | NORTH ready for SOUTH's bid
+16:08:19.990 -> North | South passes
+16:08:19.990 <- East  | EAST ready for SOUTH's bid
+16:08:19.990 -> East  | South passes
+16:08:19.990 <- West  | WEST ready for SOUTH's bid
+16:08:19.990 -> West  | South passes
+16:08:20.003 -> North | North to lead
+16:08:32.664 <- North | NORTH plays 5h
+16:08:32.664 <- East  | EAST ready for NORTH's card to trick 1
+16:08:32.664 -> East  | North plays 5H
+16:08:32.664 <- South | SOUTH ready for NORTH's card to trick 1
+16:08:32.664 -> South | North plays 5H
+16:08:32.665 <- West  | WEST ready for NORTH's card to trick 1
+16:08:32.665 -> West  | North plays 5H
+16:08:32.670 <- North | NORTH ready for dummy
+16:08:32.670 -> North | Dummy's cards : S Q T 9 3. H Q J 9 8 4. D T 7. C K J.
+16:08:32.709 <- South | SOUTH ready for dummy
+16:08:32.709 -> South | Dummy's cards : S Q T 9 3. H Q J 9 8 4. D T 7. C K J.
+16:08:32.709 <- West  | WEST ready for dummy
+16:08:32.709 -> West  | Dummy's cards : S Q T 9 3. H Q J 9 8 4. D T 7. C K J.
+16:08:37.749 <- West  | EAST plays 4h
+16:08:37.749 <- North | NORTH ready for Dummy's card to trick 1
+16:08:37.749 -> North | East plays 4H
+16:08:37.749 <- East  | EAST ready for Dummy's card to trick 1
+16:08:37.749 -> East  | East plays 4H
+16:08:37.749 <- South | SOUTH ready for Dummy's card to trick 1
+16:08:37.749 -> South | East plays 4H
+16:08:40.897 <- South | SOUTH plays kh
+16:08:40.897 <- North | NORTH ready for SOUTH's card to trick 1
+16:08:40.897 -> North | South plays KH
+16:08:40.897 <- East  | EAST ready for SOUTH's card to trick 1
+16:08:40.897 -> East  | South plays KH
+16:08:40.897 <- West  | WEST ready for SOUTH's card to trick 1
+16:08:40.897 -> West  | South plays KH
+16:08:44.362 <- West  | WEST plays 2h
+16:08:44.365 <- North | NORTH ready for  WEST's card to trick 1
+16:08:44.365 -> North | West plays 2H
+16:08:44.365 <- East  | EAST ready for  WEST's card to trick 1
+16:08:44.365 -> East  | West plays 2H
+16:08:44.366 <- South | SOUTH ready for  WEST's card to trick 1
+16:08:44.366 -> South | West plays 2H
+16:08:44.366 -> South | South to lead
+16:08:49.047 <- South | SOUTH plays ah
+16:08:49.047 <- North | NORTH ready for SOUTH's card to trick 2
+16:08:49.047 -> North | South plays AH
+16:08:49.047 <- East  | EAST ready for SOUTH's card to trick 2
+16:08:49.047 -> East  | South plays AH
+16:08:49.047 <- West  | WEST ready for SOUTH's card to trick 2
+16:08:49.047 -> West  | South plays AH
+16:08:49.910 <- West  | WEST plays 7h
+16:08:49.910 <- North | NORTH ready for  WEST's card to trick 2
+16:08:49.910 -> North | West plays 7H
+16:08:49.910 <- East  | EAST ready for  WEST's card to trick 2
+16:08:49.910 -> East  | West plays 7H
+16:08:49.910 <- South | SOUTH ready for  WEST's card to trick 2
+16:08:49.910 -> South | West plays 7H
+16:08:50.475 <- North | NORTH plays 3h
+16:08:50.475 <- East  | EAST ready for NORTH's card to trick 2
+16:08:50.475 -> East  | North plays 3H
+16:08:50.475 <- South | SOUTH ready for NORTH's card to trick 2
+16:08:50.475 -> South | North plays 3H
+16:08:50.477 <- West  | WEST ready for NORTH's card to trick 2
+16:08:50.477 -> West  | North plays 3H
+16:08:52.281 <- West  | EAST plays jh
+16:08:52.281 <- North | NORTH ready for Dummy's card to trick 2
+16:08:52.281 -> North | East plays JH
+16:08:52.291 <- East  | EAST ready for Dummy's card to trick 2
+16:08:52.291 -> East  | East plays JH
+16:08:52.291 <- South | SOUTH ready for Dummy's card to trick 2
+16:08:52.291 -> South | East plays JH
+16:08:52.291 -> South | South to lead
+16:08:54.629 <- South | SOUTH plays 6h
+16:08:54.629 <- North | NORTH ready for SOUTH's card to trick 3
+16:08:54.629 -> North | South plays 6H
+16:08:54.629 <- East  | EAST ready for SOUTH's card to trick 3
+16:08:54.629 -> East  | South plays 6H
+16:08:54.629 <- West  | WEST ready for SOUTH's card to trick 3
+16:08:54.629 -> West  | South plays 6H
+16:08:55.193 <- West  | WEST plays th
+16:08:55.193 <- North | NORTH ready for  WEST's card to trick 3
+16:08:55.193 -> North | West plays TH
+16:08:55.193 <- East  | EAST ready for  WEST's card to trick 3
+16:08:55.193 -> East  | West plays TH
+16:08:55.193 <- South | SOUTH ready for  WEST's card to trick 3
+16:08:55.193 -> South | West plays TH
+16:08:56.764 <- North | NORTH plays 5d
+16:08:56.764 <- East  | EAST ready for NORTH's card to trick 3
+16:08:56.764 -> East  | North plays 5D
+16:08:56.764 <- South | SOUTH ready for NORTH's card to trick 3
+16:08:56.764 -> South | North plays 5D
+16:08:56.764 <- West  | WEST ready for NORTH's card to trick 3
+16:08:56.764 -> West  | North plays 5D
+16:08:57.459 <- West  | EAST plays 8h
+16:08:57.459 <- North | NORTH ready for Dummy's card to trick 3
+16:08:57.459 -> North | East plays 8H
+16:08:57.459 <- East  | EAST ready for Dummy's card to trick 3
+16:08:57.459 -> East  | East plays 8H
+16:08:57.459 <- South | SOUTH ready for Dummy's card to trick 3
+16:08:57.459 -> South | East plays 8H
+16:08:57.459 -> West  | West to lead
+16:08:58.025 <- West  | WEST plays 3c
+16:08:58.025 <- North | NORTH ready for  WEST's card to trick 4
+16:08:58.026 -> North | West plays 3C
+16:08:58.026 <- East  | EAST ready for  WEST's card to trick 4
+16:08:58.026 -> East  | West plays 3C
+16:08:58.026 <- South | SOUTH ready for  WEST's card to trick 4
+16:08:58.026 -> South | West plays 3C
+16:08:58.592 <- North | NORTH plays 6c
+16:08:58.592 <- East  | EAST ready for NORTH's card to trick 4
+16:08:58.592 -> East  | North plays 6C
+16:08:58.592 <- South | SOUTH ready for NORTH's card to trick 4
+16:08:58.592 -> South | North plays 6C
+16:08:58.592 <- West  | WEST ready for NORTH's card to trick 4
+16:08:58.592 -> West  | North plays 6C
+16:08:59.158 <- West  | EAST plays jc
+16:08:59.158 <- North | NORTH ready for Dummy's card to trick 4
+16:08:59.158 -> North | East plays JC
+16:08:59.158 <- East  | EAST ready for Dummy's card to trick 4
+16:08:59.158 -> East  | East plays JC
+16:08:59.158 <- South | SOUTH ready for Dummy's card to trick 4
+16:08:59.159 -> South | East plays JC
+16:08:59.719 <- South | SOUTH plays tc
+16:08:59.719 <- North | NORTH ready for SOUTH's card to trick 4
+16:08:59.719 -> North | South plays TC
+16:08:59.719 <- East  | EAST ready for SOUTH's card to trick 4
+16:08:59.719 -> East  | South plays TC
+16:08:59.719 <- West  | WEST ready for SOUTH's card to trick 4
+16:08:59.719 -> West  | South plays TC
+16:08:59.719 -> West  | Dummy to lead
+16:09:00.275 <- West  | EAST plays kc
+16:09:00.275 <- North | NORTH ready for Dummy's card to trick 5
+16:09:00.275 -> North | East plays KC
+16:09:00.276 <- East  | EAST ready for Dummy's card to trick 5
+16:09:00.276 -> East  | East plays KC
+16:09:00.276 <- South | SOUTH ready for Dummy's card to trick 5
+16:09:00.276 -> South | East plays KC
+16:09:00.833 <- South | SOUTH plays 8c
+16:09:00.833 <- North | NORTH ready for SOUTH's card to trick 5
+16:09:00.833 -> North | South plays 8C
+16:09:00.833 <- East  | EAST ready for SOUTH's card to trick 5
+16:09:00.833 -> East  | South plays 8C
+16:09:00.833 <- West  | WEST ready for SOUTH's card to trick 5
+16:09:00.833 -> West  | South plays 8C
+16:09:01.394 <- West  | WEST plays ac
+16:09:01.394 <- North | NORTH ready for  WEST's card to trick 5
+16:09:01.394 -> North | West plays AC
+16:09:01.394 <- East  | EAST ready for  WEST's card to trick 5
+16:09:01.394 -> East  | West plays AC
+16:09:01.394 <- South | SOUTH ready for  WEST's card to trick 5
+16:09:01.394 -> South | West plays AC
+16:09:01.938 <- North | NORTH plays 2c
+16:09:01.938 <- East  | EAST ready for NORTH's card to trick 5
+16:09:01.938 -> East  | North plays 2C
+16:09:01.938 <- South | SOUTH ready for NORTH's card to trick 5
+16:09:01.938 -> South | North plays 2C
+16:09:01.938 <- West  | WEST ready for NORTH's card to trick 5
+16:09:01.938 -> West  | North plays 2C
+16:09:01.938 -> West  | West to lead
+16:09:02.524 <- West  | WEST plays qc
+16:09:02.524 <- North | NORTH ready for  WEST's card to trick 6
+16:09:02.524 -> North | West plays QC
+16:09:02.524 <- East  | EAST ready for  WEST's card to trick 6
+16:09:02.524 -> East  | West plays QC
+16:09:02.526 <- South | SOUTH ready for  WEST's card to trick 6
+16:09:02.526 -> South | West plays QC
+16:09:09.026 <- North | NORTH plays 5c
+16:09:09.026 <- East  | EAST ready for NORTH's card to trick 6
+16:09:09.026 -> East  | North plays 5C
+16:09:09.026 <- South | SOUTH ready for NORTH's card to trick 6
+16:09:09.026 -> South | North plays 5C
+16:09:09.028 <- West  | WEST ready for NORTH's card to trick 6
+16:09:09.028 -> West  | North plays 5C
+16:09:27.335 <- West  | EAST plays 9s
+16:09:27.335 <- North | NORTH ready for Dummy's card to trick 6
+16:09:27.335 -> North | East plays 9S
+16:09:27.337 <- East  | EAST ready for Dummy's card to trick 6
+16:09:27.337 -> East  | East plays 9S
+16:09:27.337 <- South | SOUTH ready for Dummy's card to trick 6
+16:09:27.337 -> South | East plays 9S
+16:09:34.258 <- South | SOUTH plays 8d
+16:09:34.258 <- North | NORTH ready for SOUTH's card to trick 6
+16:09:34.258 -> North | South plays 8D
+16:09:34.258 <- East  | EAST ready for SOUTH's card to trick 6
+16:09:34.258 -> East  | South plays 8D
+16:09:34.258 <- West  | WEST ready for SOUTH's card to trick 6
+16:09:34.258 -> West  | South plays 8D
+16:09:34.258 -> West  | West to lead
+16:09:39.501 <- West  | WEST plays 4c
+16:09:39.501 <- North | NORTH ready for  WEST's card to trick 7
+16:09:39.501 -> North | West plays 4C
+16:09:39.501 <- East  | EAST ready for  WEST's card to trick 7
+16:09:39.501 -> East  | West plays 4C
+16:09:39.501 <- South | SOUTH ready for  WEST's card to trick 7
+16:09:39.501 -> South | West plays 4C
+16:09:40.090 <- North | NORTH plays 9c
+16:09:40.090 <- East  | EAST ready for NORTH's card to trick 7
+16:09:40.090 -> East  | North plays 9C
+16:09:40.090 <- South | SOUTH ready for NORTH's card to trick 7
+16:09:40.090 -> South | North plays 9C
+16:09:40.090 <- West  | WEST ready for NORTH's card to trick 7
+16:09:40.090 -> West  | North plays 9C
+16:09:44.486 <- West  | EAST plays 9h
+16:09:44.487 <- North | NORTH ready for Dummy's card to trick 7
+16:09:44.487 -> North | East plays 9H
+16:09:44.487 <- East  | EAST ready for Dummy's card to trick 7
+16:09:44.487 -> East  | East plays 9H
+16:09:44.488 <- South | SOUTH ready for Dummy's card to trick 7
+16:09:44.488 -> South | East plays 9H
+16:09:46.537 <- South | SOUTH plays 6d
+16:09:46.537 <- North | NORTH ready for SOUTH's card to trick 7
+16:09:46.538 -> North | South plays 6D
+16:09:46.538 <- East  | EAST ready for SOUTH's card to trick 7
+16:09:46.538 -> East  | South plays 6D
+16:09:46.538 <- West  | WEST ready for SOUTH's card to trick 7
+16:09:46.538 -> West  | South plays 6D
+16:09:46.538 -> West  | Dummy to lead
+16:09:50.826 <- West  | EAST plays td
+16:09:50.826 <- North | NORTH ready for Dummy's card to trick 8
+16:09:50.826 -> North | East plays TD
+16:09:50.826 <- East  | EAST ready for Dummy's card to trick 8
+16:09:50.826 -> East  | East plays TD
+16:09:50.826 <- South | SOUTH ready for Dummy's card to trick 8
+16:09:50.826 -> South | East plays TD
+16:09:51.387 <- South | SOUTH plays ad
+16:09:51.387 <- North | NORTH ready for SOUTH's card to trick 8
+16:09:51.387 -> North | South plays AD
+16:09:51.387 <- East  | EAST ready for SOUTH's card to trick 8
+16:09:51.387 -> East  | South plays AD
+16:09:51.387 <- West  | WEST ready for SOUTH's card to trick 8
+16:09:51.388 -> West  | South plays AD
+16:09:51.925 <- West  | WEST plays 4d
+16:09:51.925 <- North | NORTH ready for  WEST's card to trick 8
+16:09:51.925 -> North | West plays 4D
+16:09:51.925 <- East  | EAST ready for  WEST's card to trick 8
+16:09:51.925 -> East  | West plays 4D
+16:09:51.925 <- South | SOUTH ready for  WEST's card to trick 8
+16:09:51.925 -> South | West plays 4D
+16:09:52.482 <- North | NORTH plays 2d
+16:09:52.482 <- East  | EAST ready for NORTH's card to trick 8
+16:09:52.482 -> East  | North plays 2D
+16:09:52.482 <- South | SOUTH ready for NORTH's card to trick 8
+16:09:52.482 -> South | North plays 2D
+16:09:52.482 <- West  | WEST ready for NORTH's card to trick 8
+16:09:52.482 -> West  | North plays 2D
+16:09:52.482 -> South | South to lead
+16:09:53.033 <- South | SOUTH plays 4s
+16:09:53.033 <- North | NORTH ready for SOUTH's card to trick 9
+16:09:53.033 -> North | South plays 4S
+16:09:53.033 <- East  | EAST ready for SOUTH's card to trick 9
+16:09:53.033 -> East  | South plays 4S
+16:09:53.033 <- West  | WEST ready for SOUTH's card to trick 9
+16:09:53.033 -> West  | South plays 4S
+16:09:53.584 <- West  | WEST plays 7s
+16:09:53.585 <- North | NORTH ready for  WEST's card to trick 9
+16:09:53.585 -> North | West plays 7S
+16:09:53.585 <- East  | EAST ready for  WEST's card to trick 9
+16:09:53.585 -> East  | West plays 7S
+16:09:53.585 <- South | SOUTH ready for  WEST's card to trick 9
+16:09:53.585 -> South | West plays 7S
+16:09:54.139 <- North | NORTH plays as
+16:09:54.139 <- East  | EAST ready for NORTH's card to trick 9
+16:09:54.139 -> East  | North plays AS
+16:09:54.139 <- South | SOUTH ready for NORTH's card to trick 9
+16:09:54.139 -> South | North plays AS
+16:09:54.139 <- West  | WEST ready for NORTH's card to trick 9
+16:09:54.139 -> West  | North plays AS
+16:09:54.677 <- West  | EAST plays 3s
+16:09:54.677 <- North | NORTH ready for Dummy's card to trick 9
+16:09:54.677 -> North | East plays 3S
+16:09:54.677 <- East  | EAST ready for Dummy's card to trick 9
+16:09:54.677 -> East  | East plays 3S
+16:09:54.677 <- South | SOUTH ready for Dummy's card to trick 9
+16:09:54.677 -> South | East plays 3S
+16:09:54.677 -> North | North to lead
+16:09:55.239 <- North | NORTH plays kd
+16:09:55.239 <- East  | EAST ready for NORTH's card to trick 10
+16:09:55.239 -> East  | North plays KD
+16:09:55.239 <- South | SOUTH ready for NORTH's card to trick 10
+16:09:55.239 -> South | North plays KD
+16:09:55.239 <- West  | WEST ready for NORTH's card to trick 10
+16:09:55.239 -> West  | North plays KD
+16:09:55.790 <- West  | EAST plays 7d
+16:09:55.790 <- North | NORTH ready for Dummy's card to trick 10
+16:09:55.790 -> North | East plays 7D
+16:09:55.790 <- East  | EAST ready for Dummy's card to trick 10
+16:09:55.790 -> East  | East plays 7D
+16:09:55.790 <- South | SOUTH ready for Dummy's card to trick 10
+16:09:55.790 -> South | East plays 7D
+16:09:56.330 <- South | SOUTH plays jd
+16:09:56.330 <- North | NORTH ready for SOUTH's card to trick 10
+16:09:56.330 -> North | South plays JD
+16:09:56.332 <- East  | EAST ready for SOUTH's card to trick 10
+16:09:56.332 -> East  | South plays JD
+16:09:56.332 <- West  | WEST ready for SOUTH's card to trick 10
+16:09:56.332 -> West  | South plays JD
+16:09:56.883 <- West  | WEST plays 3d
+16:09:56.883 <- North | NORTH ready for  WEST's card to trick 10
+16:09:56.883 -> North | West plays 3D
+16:09:56.883 <- East  | EAST ready for  WEST's card to trick 10
+16:09:56.883 -> East  | West plays 3D
+16:09:56.883 <- South | SOUTH ready for  WEST's card to trick 10
+16:09:56.885 -> South | West plays 3D
+16:09:56.885 -> North | North to lead
+16:09:57.457 <- North | NORTH plays 2s
+16:09:57.457 <- East  | EAST ready for NORTH's card to trick 11
+16:09:57.457 -> East  | North plays 2S
+16:09:57.457 <- South | SOUTH ready for NORTH's card to trick 11
+16:09:57.457 -> South | North plays 2S
+16:09:57.457 <- West  | WEST ready for NORTH's card to trick 11
+16:09:57.457 -> West  | North plays 2S
+16:09:57.999 <- West  | EAST plays ts
+16:09:58.001 <- North | NORTH ready for Dummy's card to trick 11
+16:09:58.001 -> North | East plays TS
+16:09:58.001 <- East  | EAST ready for Dummy's card to trick 11
+16:09:58.001 -> East  | East plays TS
+16:09:58.001 <- South | SOUTH ready for Dummy's card to trick 11
+16:09:58.001 -> South | East plays TS
+16:09:58.549 <- South | SOUTH plays js
+16:09:58.549 <- North | NORTH ready for SOUTH's card to trick 11
+16:09:58.549 -> North | South plays JS
+16:09:58.549 <- East  | EAST ready for SOUTH's card to trick 11
+16:09:58.549 -> East  | South plays JS
+16:09:58.549 <- West  | WEST ready for SOUTH's card to trick 11
+16:09:58.549 -> West  | South plays JS
+16:09:59.087 <- West  | WEST plays 6s
+16:09:59.087 <- North | NORTH ready for  WEST's card to trick 11
+16:09:59.087 -> North | West plays 6S
+16:09:59.087 <- East  | EAST ready for  WEST's card to trick 11
+16:09:59.087 -> East  | West plays 6S
+16:09:59.087 <- South | SOUTH ready for  WEST's card to trick 11
+16:09:59.087 -> South | West plays 6S
+16:09:59.088 -> South | South to lead
+16:09:59.642 <- South | SOUTH plays ks
+16:09:59.642 <- North | NORTH ready for SOUTH's card to trick 12
+16:09:59.642 -> North | South plays KS
+16:09:59.642 <- East  | EAST ready for SOUTH's card to trick 12
+16:09:59.642 -> East  | South plays KS
+16:09:59.642 <- West  | WEST ready for SOUTH's card to trick 12
+16:09:59.642 -> West  | South plays KS
+16:10:00.186 <- West  | WEST plays 7c
+16:10:00.186 <- North | NORTH ready for  WEST's card to trick 12
+16:10:00.186 -> North | West plays 7C
+16:10:00.186 <- East  | EAST ready for  WEST's card to trick 12
+16:10:00.186 -> East  | West plays 7C
+16:10:00.186 <- South | SOUTH ready for  WEST's card to trick 12
+16:10:00.186 -> South | West plays 7C
+16:10:00.736 <- North | NORTH plays 8s
+16:10:00.736 <- East  | EAST ready for NORTH's card to trick 12
+16:10:00.736 -> East  | North plays 8S
+16:10:00.736 <- South | SOUTH ready for NORTH's card to trick 12
+16:10:00.736 -> South | North plays 8S
+16:10:00.736 <- West  | WEST ready for NORTH's card to trick 12
+16:10:00.736 -> West  | North plays 8S
+16:10:01.304 <- West  | EAST plays qs
+16:10:01.304 <- North | NORTH ready for Dummy's card to trick 12
+16:10:01.304 -> North | East plays QS
+16:10:01.304 <- East  | EAST ready for Dummy's card to trick 12
+16:10:01.304 -> East  | East plays QS
+16:10:01.304 <- South | SOUTH ready for Dummy's card to trick 12
+16:10:01.304 -> South | East plays QS
+16:10:01.304 -> South | South to lead
+16:10:01.879 <- South | SOUTH plays 5s
+16:10:01.879 <- North | NORTH ready for SOUTH's card to trick 13
+16:10:01.879 -> North | South plays 5S
+16:10:01.881 <- East  | EAST ready for SOUTH's card to trick 13
+16:10:01.881 -> East  | South plays 5S
+16:10:01.881 <- West  | WEST ready for SOUTH's card to trick 13
+16:10:01.881 -> West  | South plays 5S
+16:10:02.439 <- West  | WEST plays qd
+16:10:02.439 <- North | NORTH ready for  WEST's card to trick 13
+16:10:02.439 -> North | West plays QD
+16:10:02.441 <- East  | EAST ready for  WEST's card to trick 13
+16:10:02.441 -> East  | West plays QD
+16:10:02.441 <- South | SOUTH ready for  WEST's card to trick 13
+16:10:02.441 -> South | West plays QD
+16:10:02.982 <- North | NORTH plays 9d
+16:10:02.982 <- East  | EAST ready for NORTH's card to trick 13
+16:10:02.982 -> East  | North plays 9D
+16:10:02.982 <- South | SOUTH ready for NORTH's card to trick 13
+16:10:02.982 -> South | North plays 9D
+16:10:02.982 <- West  | WEST ready for NORTH's card to trick 13
+16:10:02.982 -> West  | North plays 9D
+16:10:03.536 <- West  | EAST plays qh
+16:10:03.536 <- North | NORTH ready for Dummy's card to trick 13
+16:10:03.536 -> North | East plays QH
+16:10:03.536 <- East  | EAST ready for Dummy's card to trick 13
+16:10:03.538 -> East  | East plays QH
+16:10:03.538 <- South | SOUTH ready for Dummy's card to trick 13
+16:10:03.538 -> South | East plays QH
+16:10:03.538 -> North | Timing - N/S : this board  0:00,  total  0:00.  E/W : this board  0:00,  total  0:00.
+16:10:03.538 -> East  | Timing - N/S : this board  0:00,  total  0:00.  E/W : this board  0:00,  total  0:00.
+16:10:03.538 -> South | Timing - N/S : this board  0:00,  total  0:00.  E/W : this board  0:00,  total  0:00.
+16:10:03.538 -> West  | Timing - N/S : this board  0:00,  total  0:00.  E/W : this board  0:00,  total  0:00.
+16:10:03.540 -> North | Start of board
+16:10:03.540 -> East  | Start of board
+16:10:03.540 -> South | Start of board
+16:10:03.540 -> West  | Start of board
+16:10:10.102 <- North | NORTH ready for deal
+16:10:10.102 -> North | Board number 4. Dealer WEST. Both vulnerable.
+16:10:10.102 <- East  | EAST ready for deal
+16:10:10.102 -> East  | Board number 4. Dealer WEST. Both vulnerable.
+16:10:10.104 <- South | SOUTH ready for deal
+16:10:10.104 -> South | Board number 4. Dealer WEST. Both vulnerable.
+16:10:10.104 <- West  | WEST ready for deal
+16:10:10.104 -> West  | Board number 4. Dealer WEST. Both vulnerable.
+16:10:10.121 <- North | NORTH ready for cards
+16:10:10.121 -> North | North's cards : S T 9 8 7 4. H J 8 7. D A 6. C J T 3.
+16:10:10.123 <- East  | EAST ready for cards
+16:10:10.125 -> East  | East's cards : S K Q 5 3 2. H K Q 2. D T 8. C K 7 6.
+16:10:10.125 <- South | SOUTH ready for cards
+16:10:10.125 -> South | South's cards : S 6. H 6 5 3. D K 9 7 5 4 3 2. C 4 2.
+16:10:10.125 <- West  | WEST ready for cards
+16:10:10.125 -> West  | West's cards : S A J. H A T 9 4. D Q J. C A Q 9 8 5.
+16:10:11.496 <- West  | WEST bids 1C
+16:10:11.496 <- North | NORTH ready for  WEST's bid
+16:10:11.496 -> North | West bids 1C
+16:10:11.496 <- East  | EAST ready for  WEST's bid
+16:10:11.496 -> East  | West bids 1C
+16:10:11.496 <- South | SOUTH ready for  WEST's bid
+16:10:11.497 -> South | West bids 1C
+16:10:12.016 <- North | NORTH PASSES
+16:10:12.019 <- East  | EAST ready for NORTH's bid
+16:10:12.019 -> East  | North passes
+16:10:12.019 <- South | SOUTH ready for NORTH's bid
+16:10:12.019 -> South | North passes
+16:10:12.019 <- West  | WEST ready for NORTH's bid
+16:10:12.019 -> West  | North passes
+16:10:12.545 <- East  | EAST bids 1S
+16:10:12.546 <- North | NORTH ready for  EAST's bid
+16:10:12.546 -> North | East bids 1S
+16:10:12.546 <- South | SOUTH ready for  EAST's bid
+16:10:12.546 -> South | East bids 1S
+16:10:12.547 <- West  | WEST ready for  EAST's bid
+16:10:12.547 -> West  | East bids 1S
+16:10:13.082 <- South | SOUTH PASSES
+16:10:13.084 <- North | NORTH ready for SOUTH's bid
+16:10:13.084 -> North | South passes
+16:10:13.084 <- East  | EAST ready for SOUTH's bid
+16:10:13.084 -> East  | South passes
+16:10:13.084 <- West  | WEST ready for SOUTH's bid
+16:10:13.084 -> West  | South passes
+16:10:13.618 <- West  | WEST bids 2H
+16:10:13.619 <- North | NORTH ready for  WEST's bid
+16:10:13.619 -> North | West bids 2H
+16:10:13.619 <- East  | EAST ready for  WEST's bid
+16:10:13.619 -> East  | West bids 2H
+16:10:13.619 <- South | SOUTH ready for  WEST's bid
+16:10:13.619 -> South | West bids 2H
+16:10:16.831 <- North | NORTH PASSES
+16:10:16.831 <- East  | EAST ready for NORTH's bid
+16:10:16.831 -> East  | North passes
+16:10:16.831 <- South | SOUTH ready for NORTH's bid
+16:10:16.831 -> South | North passes
+16:10:16.831 <- West  | WEST ready for NORTH's bid
+16:10:16.831 -> West  | North passes
+16:10:19.443 <- East  | EAST bids 2S
+16:10:19.443 <- North | NORTH ready for  EAST's bid
+16:10:19.443 -> North | East bids 2S
+16:10:19.443 <- South | SOUTH ready for  EAST's bid
+16:10:19.445 -> South | East bids 2S
+16:10:19.445 <- West  | WEST ready for  EAST's bid
+16:10:19.445 -> West  | East bids 2S
+16:10:22.408 <- South | SOUTH PASSES
+16:10:22.408 <- North | NORTH ready for SOUTH's bid
+16:10:22.408 -> North | South passes
+16:10:22.408 <- East  | EAST ready for SOUTH's bid
+16:10:22.408 -> East  | South passes
+16:10:22.408 <- West  | WEST ready for SOUTH's bid
+16:10:22.408 -> West  | South passes
+16:10:24.167 <- West  | WEST bids 2NT
+16:10:24.167 <- North | NORTH ready for  WEST's bid
+16:10:24.167 -> North | West bids 2NT
+16:10:24.168 <- East  | EAST ready for  WEST's bid
+16:10:24.168 -> East  | West bids 2NT
+16:10:24.168 <- South | SOUTH ready for  WEST's bid
+16:10:24.168 -> South | West bids 2NT
+16:10:25.237 <- North | NORTH PASSES
+16:10:25.237 <- East  | EAST ready for NORTH's bid
+16:10:25.237 -> East  | North passes
+16:10:25.237 <- South | SOUTH ready for NORTH's bid
+16:10:25.237 -> South | North passes
+16:10:25.237 <- West  | WEST ready for NORTH's bid
+16:10:25.237 -> West  | North passes
+16:10:26.917 <- East  | EAST bids 3NT
+16:10:26.917 <- North | NORTH ready for  EAST's bid
+16:10:26.917 -> North | East bids 3NT
+16:10:26.917 <- South | SOUTH ready for  EAST's bid
+16:10:26.917 -> South | East bids 3NT
+16:10:26.917 <- West  | WEST ready for  EAST's bid
+16:10:26.917 -> West  | East bids 3NT
+16:10:29.195 <- South | SOUTH PASSES
+16:10:29.195 <- North | NORTH ready for SOUTH's bid
+16:10:29.195 -> North | South passes
+16:10:29.195 <- East  | EAST ready for SOUTH's bid
+16:10:29.195 -> East  | South passes
+16:10:29.195 <- West  | WEST ready for SOUTH's bid
+16:10:29.195 -> West  | South passes
+16:10:30.717 <- West  | WEST PASSES
+16:10:30.717 <- North | NORTH ready for  WEST's bid
+16:10:30.717 -> North | West passes
+16:10:30.717 <- East  | EAST ready for  WEST's bid
+16:10:30.717 -> East  | West passes
+16:10:30.720 <- South | SOUTH ready for  WEST's bid
+16:10:30.720 -> South | West passes
+16:10:32.916 <- North | NORTH PASSES
+16:10:32.916 <- East  | EAST ready for NORTH's bid
+16:10:32.916 -> East  | North passes
+16:10:32.916 <- South | SOUTH ready for NORTH's bid
+16:10:32.916 -> South | North passes
+16:10:32.916 <- West  | WEST ready for NORTH's bid
+16:10:32.916 -> West  | North passes
+16:10:32.916 -> North | North to lead
+16:10:35.047 <- North | NORTH plays ad
+16:10:35.047 <- East  | EAST ready for NORTH's card to trick 1
+16:10:35.047 -> East  | North plays AD
+16:10:35.047 <- South | SOUTH ready for NORTH's card to trick 1
+16:10:35.047 -> South | North plays AD
+16:10:35.047 <- West  | WEST ready for NORTH's card to trick 1
+16:10:35.047 -> West  | North plays AD
+16:10:35.047 <- North | NORTH ready for dummy
+16:10:35.047 -> North | Dummy's cards : S K Q 5 3 2. H K Q 2. D T 8. C K 7 6.
+16:10:35.100 <- South | SOUTH ready for dummy
+16:10:35.104 -> South | Dummy's cards : S K Q 5 3 2. H K Q 2. D T 8. C K 7 6.
+16:10:35.104 <- West  | WEST ready for dummy
+16:10:35.104 -> West  | Dummy's cards : S K Q 5 3 2. H K Q 2. D T 8. C K 7 6.
+16:10:35.828 <- West  | EAST plays 8d
+16:10:35.828 <- North | NORTH ready for Dummy's card to trick 1
+16:10:35.828 -> North | East plays 8D
+16:10:35.828 <- East  | EAST ready for Dummy's card to trick 1
+16:10:35.828 -> East  | East plays 8D
+16:10:35.828 <- South | SOUTH ready for Dummy's card to trick 1
+16:10:35.828 -> South | East plays 8D
+16:10:36.402 <- South | SOUTH plays 2d
+16:10:36.402 <- North | NORTH ready for SOUTH's card to trick 1
+16:10:36.403 -> North | South plays 2D
+16:10:36.403 <- East  | EAST ready for SOUTH's card to trick 1
+16:10:36.403 -> East  | South plays 2D
+16:10:36.403 <- West  | WEST ready for SOUTH's card to trick 1
+16:10:36.403 -> West  | South plays 2D
+16:10:36.946 <- West  | WEST plays jd
+16:10:36.946 <- North | NORTH ready for  WEST's card to trick 1
+16:10:36.946 -> North | West plays JD
+16:10:36.946 <- East  | EAST ready for  WEST's card to trick 1
+16:10:36.946 -> East  | West plays JD
+16:10:36.946 <- South | SOUTH ready for  WEST's card to trick 1
+16:10:36.946 -> South | West plays JD
+16:10:36.946 -> North | North to lead
+16:10:37.527 <- North | NORTH plays 6d
+16:10:37.529 <- East  | EAST ready for NORTH's card to trick 2
+16:10:37.529 -> East  | North plays 6D
+16:10:37.529 <- South | SOUTH ready for NORTH's card to trick 2
+16:10:37.529 -> South | North plays 6D
+16:10:37.529 <- West  | WEST ready for NORTH's card to trick 2
+16:10:37.529 -> West  | North plays 6D
+16:10:38.079 <- West  | EAST plays td
+16:10:38.079 <- North | NORTH ready for Dummy's card to trick 2
+16:10:38.079 -> North | East plays TD
+16:10:38.079 <- East  | EAST ready for Dummy's card to trick 2
+16:10:38.079 -> East  | East plays TD
+16:10:38.079 <- South | SOUTH ready for Dummy's card to trick 2
+16:10:38.079 -> South | East plays TD
+16:10:38.629 <- South | SOUTH plays kd
+16:10:38.629 <- North | NORTH ready for SOUTH's card to trick 2
+16:10:38.629 -> North | South plays KD
+16:10:38.629 <- East  | EAST ready for SOUTH's card to trick 2
+16:10:38.629 -> East  | South plays KD
+16:10:38.629 <- West  | WEST ready for SOUTH's card to trick 2
+16:10:38.629 -> West  | South plays KD
+16:10:39.150 <- West  | WEST plays qd
+16:10:39.150 <- North | NORTH ready for  WEST's card to trick 2
+16:10:39.150 -> North | West plays QD
+16:10:39.150 <- East  | EAST ready for  WEST's card to trick 2
+16:10:39.150 -> East  | West plays QD
+16:10:39.150 <- South | SOUTH ready for  WEST's card to trick 2
+16:10:39.150 -> South | West plays QD
+16:10:39.152 -> South | South to lead
+16:10:39.695 <- South | SOUTH plays 3d
+16:10:39.695 <- North | NORTH ready for SOUTH's card to trick 3
+16:10:39.695 -> North | South plays 3D
+16:10:39.695 <- East  | EAST ready for SOUTH's card to trick 3
+16:10:39.695 -> East  | South plays 3D
+16:10:39.695 <- West  | WEST ready for SOUTH's card to trick 3
+16:10:39.695 -> West  | South plays 3D
+16:10:40.254 <- West  | WEST plays 5c
+16:10:40.254 <- North | NORTH ready for  WEST's card to trick 3
+16:10:40.254 -> North | West plays 5C
+16:10:40.260 <- East  | EAST ready for  WEST's card to trick 3
+16:10:40.260 -> East  | West plays 5C
+16:10:40.260 <- South | SOUTH ready for  WEST's card to trick 3
+16:10:40.265 -> South | West plays 5C
+16:10:40.833 <- North | NORTH plays 3c
+16:10:40.833 <- East  | EAST ready for NORTH's card to trick 3
+16:10:40.833 -> East  | North plays 3C
+16:10:40.833 <- South | SOUTH ready for NORTH's card to trick 3
+16:10:40.833 -> South | North plays 3C
+16:10:40.833 <- West  | WEST ready for NORTH's card to trick 3
+16:10:40.833 -> West  | North plays 3C
+16:10:41.382 <- West  | EAST plays 6c
+16:10:41.382 <- North | NORTH ready for Dummy's card to trick 3
+16:10:41.382 -> North | East plays 6C
+16:10:41.382 <- East  | EAST ready for Dummy's card to trick 3
+16:10:41.382 -> East  | East plays 6C
+16:10:41.383 <- South | SOUTH ready for Dummy's card to trick 3
+16:10:41.383 -> South | East plays 6C
+16:10:41.383 -> South | South to lead
+16:10:41.982 <- South | SOUTH plays 4d
+16:10:41.982 <- North | NORTH ready for SOUTH's card to trick 4
+16:10:41.982 -> North | South plays 4D
+16:10:41.982 <- East  | EAST ready for SOUTH's card to trick 4
+16:10:41.982 -> East  | South plays 4D
+16:10:41.982 <- West  | WEST ready for SOUTH's card to trick 4
+16:10:41.982 -> West  | South plays 4D
+16:10:42.535 <- West  | WEST plays 9c
+16:10:42.535 <- North | NORTH ready for  WEST's card to trick 4
+16:10:42.535 -> North | West plays 9C
+16:10:42.535 <- East  | EAST ready for  WEST's card to trick 4
+16:10:42.535 -> East  | West plays 9C
+16:10:42.535 <- South | SOUTH ready for  WEST's card to trick 4
+16:10:42.535 -> South | West plays 9C
+16:10:43.083 <- North | NORTH plays tc
+16:10:43.083 <- East  | EAST ready for NORTH's card to trick 4
+16:10:43.083 -> East  | North plays TC
+16:10:43.084 <- South | SOUTH ready for NORTH's card to trick 4
+16:10:43.084 -> South | North plays TC
+16:10:43.084 <- West  | WEST ready for NORTH's card to trick 4
+16:10:43.084 -> West  | North plays TC
+16:10:43.667 <- West  | EAST plays 7c
+16:10:43.668 <- North | NORTH ready for Dummy's card to trick 4
+16:10:43.668 -> North | East plays 7C
+16:10:43.668 <- East  | EAST ready for Dummy's card to trick 4
+16:10:43.668 -> East  | East plays 7C
+16:10:43.668 <- South | SOUTH ready for Dummy's card to trick 4
+16:10:43.668 -> South | East plays 7C
+16:10:43.668 -> South | South to lead
+16:10:44.230 <- South | SOUTH plays 5d
+16:10:44.232 <- North | NORTH ready for SOUTH's card to trick 5
+16:10:44.232 -> North | South plays 5D
+16:10:44.232 <- East  | EAST ready for SOUTH's card to trick 5
+16:10:44.232 -> East  | South plays 5D
+16:10:44.232 <- West  | WEST ready for SOUTH's card to trick 5
+16:10:44.232 -> West  | South plays 5D
+16:10:58.224 <- West  | WEST plays 8c
+16:10:58.224 <- North | NORTH ready for  WEST's card to trick 5
+16:10:58.224 -> North | West plays 8C
+16:10:58.224 <- East  | EAST ready for  WEST's card to trick 5
+16:10:58.224 -> East  | West plays 8C
+16:10:58.224 <- South | SOUTH ready for  WEST's card to trick 5
+16:10:58.224 -> South | West plays 8C
+16:11:16.288 <- North | NORTH plays jc
+16:11:16.288 <- East  | EAST ready for NORTH's card to trick 5
+16:11:16.288 -> East  | North plays JC
+16:11:16.288 <- South | SOUTH ready for NORTH's card to trick 5
+16:11:16.288 -> South | North plays JC
+16:11:16.288 <- West  | WEST ready for NORTH's card to trick 5
+16:11:16.288 -> West  | North plays JC
+16:11:25.945 <- West  | EAST plays kc
+16:11:25.945 <- North | NORTH ready for Dummy's card to trick 5
+16:11:25.945 -> North | East plays KC
+16:11:25.945 <- East  | EAST ready for Dummy's card to trick 5
+16:11:25.945 -> East  | East plays KC
+16:11:25.945 <- South | SOUTH ready for Dummy's card to trick 5
+16:11:25.945 -> South | East plays KC
+16:11:25.945 -> South | South to lead
+16:11:26.512 <- South | SOUTH plays 7d
+16:11:26.512 <- North | NORTH ready for SOUTH's card to trick 6
+16:11:26.512 -> North | South plays 7D
+16:11:26.513 <- East  | EAST ready for SOUTH's card to trick 6
+16:11:26.513 -> East  | South plays 7D
+16:11:26.513 <- West  | WEST ready for SOUTH's card to trick 6
+16:11:26.513 -> West  | South plays 7D
+16:11:34.562 <- West  | WEST plays as
+16:11:34.562 <- North | NORTH ready for  WEST's card to trick 6
+16:11:34.562 -> North | West plays AS
+16:11:34.562 <- East  | EAST ready for  WEST's card to trick 6
+16:11:34.562 -> East  | West plays AS
+16:11:34.562 <- South | SOUTH ready for  WEST's card to trick 6
+16:11:34.562 -> South | West plays AS
+16:11:41.478 <- North | NORTH plays 7h
+16:11:41.478 <- East  | EAST ready for NORTH's card to trick 6
+16:11:41.478 -> East  | North plays 7H
+16:11:41.478 <- South | SOUTH ready for NORTH's card to trick 6
+16:11:41.478 -> South | North plays 7H
+16:11:41.478 <- West  | WEST ready for NORTH's card to trick 6
+16:11:41.478 -> West  | North plays 7H
+16:11:45.324 <- West  | EAST plays 2h
+16:11:45.326 <- North | NORTH ready for Dummy's card to trick 6
+16:11:45.326 -> North | East plays 2H
+16:11:45.327 <- East  | EAST ready for Dummy's card to trick 6
+16:11:45.327 -> East  | East plays 2H
+16:11:45.327 <- South | SOUTH ready for Dummy's card to trick 6
+16:11:45.327 -> South | East plays 2H
+16:11:45.327 -> South | South to lead
+16:11:46.641 <- South | SOUTH plays 9d
+16:11:46.641 <- North | NORTH ready for SOUTH's card to trick 7
+16:11:46.641 -> North | South plays 9D
+16:11:46.641 <- East  | EAST ready for SOUTH's card to trick 7
+16:11:46.641 -> East  | South plays 9D
+16:11:46.641 <- West  | WEST ready for SOUTH's card to trick 7
+16:11:46.641 -> West  | South plays 9D
+16:11:48.824 <- West  | WEST plays qc
+16:11:48.824 <- North | NORTH ready for  WEST's card to trick 7
+16:11:48.824 -> North | West plays QC
+16:11:48.824 <- East  | EAST ready for  WEST's card to trick 7
+16:11:48.824 -> East  | West plays QC
+16:11:48.824 <- South | SOUTH ready for  WEST's card to trick 7
+16:11:48.824 -> South | West plays QC
+16:11:50.181 <- North | NORTH plays 8h
+16:11:50.181 <- East  | EAST ready for NORTH's card to trick 7
+16:11:50.181 -> East  | North plays 8H
+16:11:50.181 <- South | SOUTH ready for NORTH's card to trick 7
+16:11:50.181 -> South | North plays 8H
+16:11:50.181 <- West  | WEST ready for NORTH's card to trick 7
+16:11:50.181 -> West  | North plays 8H
+16:11:50.729 <- West  | EAST plays 2s
+16:11:50.729 <- North | NORTH ready for Dummy's card to trick 7
+16:11:50.729 -> North | East plays 2S
+16:11:50.729 <- East  | EAST ready for Dummy's card to trick 7
+16:11:50.729 -> East  | East plays 2S
+16:11:50.729 <- South | SOUTH ready for Dummy's card to trick 7
+16:11:50.729 -> South | East plays 2S
+16:11:50.729 -> South | South to lead
+16:11:51.303 <- South | SOUTH plays 4c
+16:11:51.303 <- North | NORTH ready for SOUTH's card to trick 8
+16:11:51.303 -> North | South plays 4C
+16:11:51.303 <- East  | EAST ready for SOUTH's card to trick 8
+16:11:51.304 -> East  | South plays 4C
+16:11:51.304 <- West  | WEST ready for SOUTH's card to trick 8
+16:11:51.304 -> West  | South plays 4C
+16:11:51.857 <- West  | WEST plays ac
+16:11:51.857 <- North | NORTH ready for  WEST's card to trick 8
+16:11:51.857 -> North | West plays AC
+16:11:51.857 <- East  | EAST ready for  WEST's card to trick 8
+16:11:51.857 -> East  | West plays AC
+16:11:51.857 <- South | SOUTH ready for  WEST's card to trick 8
+16:11:51.857 -> South | West plays AC
+16:11:52.394 <- North | NORTH plays 4s
+16:11:52.394 <- East  | EAST ready for NORTH's card to trick 8
+16:11:52.394 -> East  | North plays 4S
+16:11:52.394 <- South | SOUTH ready for NORTH's card to trick 8
+16:11:52.394 -> South | North plays 4S
+16:11:52.394 <- West  | WEST ready for NORTH's card to trick 8
+16:11:52.394 -> West  | North plays 4S
+16:11:52.927 <- West  | EAST plays 3s
+16:11:52.927 <- North | NORTH ready for Dummy's card to trick 8
+16:11:52.927 -> North | East plays 3S
+16:11:52.927 <- East  | EAST ready for Dummy's card to trick 8
+16:11:52.927 -> East  | East plays 3S
+16:11:52.929 <- South | SOUTH ready for Dummy's card to trick 8
+16:11:52.929 -> South | East plays 3S
+16:11:52.929 -> West  | West to lead
+16:11:53.443 <- West  | WEST plays 4h
+16:11:53.443 <- North | NORTH ready for  WEST's card to trick 9
+16:11:53.443 -> North | West plays 4H
+16:11:53.443 <- East  | EAST ready for  WEST's card to trick 9
+16:11:53.443 -> East  | West plays 4H
+16:11:53.443 <- South | SOUTH ready for  WEST's card to trick 9
+16:11:53.443 -> South | West plays 4H
+16:11:54.013 <- North | NORTH plays jh
+16:11:54.013 <- East  | EAST ready for NORTH's card to trick 9
+16:11:54.013 -> East  | North plays JH
+16:11:54.013 <- South | SOUTH ready for NORTH's card to trick 9
+16:11:54.013 -> South | North plays JH
+16:11:54.013 <- West  | WEST ready for NORTH's card to trick 9
+16:11:54.013 -> West  | North plays JH
+16:11:54.559 <- West  | EAST plays qh
+16:11:54.560 <- North | NORTH ready for Dummy's card to trick 9
+16:11:54.560 -> North | East plays QH
+16:11:54.560 <- East  | EAST ready for Dummy's card to trick 9
+16:11:54.560 -> East  | East plays QH
+16:11:54.560 <- South | SOUTH ready for Dummy's card to trick 9
+16:11:54.560 -> South | East plays QH
+16:11:55.118 <- South | SOUTH plays 3h
+16:11:55.118 <- North | NORTH ready for SOUTH's card to trick 9
+16:11:55.118 -> North | South plays 3H
+16:11:55.118 <- East  | EAST ready for SOUTH's card to trick 9
+16:11:55.118 -> East  | South plays 3H
+16:11:55.118 <- West  | WEST ready for SOUTH's card to trick 9
+16:11:55.118 -> West  | South plays 3H
+16:11:55.118 -> West  | Dummy to lead
+16:11:55.674 <- West  | EAST plays kh
+16:11:55.674 <- North | NORTH ready for Dummy's card to trick 10
+16:11:55.674 -> North | East plays KH
+16:11:55.674 <- East  | EAST ready for Dummy's card to trick 10
+16:11:55.674 -> East  | East plays KH
+16:11:55.674 <- South | SOUTH ready for Dummy's card to trick 10
+16:11:55.674 -> South | East plays KH
+16:11:56.237 <- South | SOUTH plays 5h
+16:11:56.237 <- North | NORTH ready for SOUTH's card to trick 10
+16:11:56.237 -> North | South plays 5H
+16:11:56.237 <- East  | EAST ready for SOUTH's card to trick 10
+16:11:56.237 -> East  | South plays 5H
+16:11:56.237 <- West  | WEST ready for SOUTH's card to trick 10
+16:11:56.237 -> West  | South plays 5H
+16:11:56.786 <- West  | WEST plays 9h
+16:11:56.786 <- North | NORTH ready for  WEST's card to trick 10
+16:11:56.786 -> North | West plays 9H
+16:11:56.786 <- East  | EAST ready for  WEST's card to trick 10
+16:11:56.786 -> East  | West plays 9H
+16:11:56.786 <- South | SOUTH ready for  WEST's card to trick 10
+16:11:56.786 -> South | West plays 9H
+16:11:57.344 <- North | NORTH plays 7s
+16:11:57.344 <- East  | EAST ready for NORTH's card to trick 10
+16:11:57.344 -> East  | North plays 7S
+16:11:57.344 <- South | SOUTH ready for NORTH's card to trick 10
+16:11:57.344 -> South | North plays 7S
+16:11:57.346 <- West  | WEST ready for NORTH's card to trick 10
+16:11:57.346 -> West  | North plays 7S
+16:11:57.346 -> West  | Dummy to lead
+16:11:57.894 <- West  | EAST plays 5s
+16:11:57.894 <- North | NORTH ready for Dummy's card to trick 11
+16:11:57.894 -> North | East plays 5S
+16:11:57.895 <- East  | EAST ready for Dummy's card to trick 11
+16:11:57.895 -> East  | East plays 5S
+16:11:57.895 <- South | SOUTH ready for Dummy's card to trick 11
+16:11:57.895 -> South | East plays 5S
+16:11:58.461 <- South | SOUTH plays 6s
+16:11:58.462 <- North | NORTH ready for SOUTH's card to trick 11
+16:11:58.462 -> North | South plays 6S
+16:11:58.462 <- East  | EAST ready for SOUTH's card to trick 11
+16:11:58.462 -> East  | South plays 6S
+16:11:58.462 <- West  | WEST ready for SOUTH's card to trick 11
+16:11:58.462 -> West  | South plays 6S
+16:11:59.002 <- West  | WEST plays js
+16:11:59.002 <- North | NORTH ready for  WEST's card to trick 11
+16:11:59.002 -> North | West plays JS
+16:11:59.002 <- East  | EAST ready for  WEST's card to trick 11
+16:11:59.002 -> East  | West plays JS
+16:11:59.002 <- South | SOUTH ready for  WEST's card to trick 11
+16:11:59.002 -> South | West plays JS
+16:11:59.545 <- North | NORTH plays 8s
+16:11:59.545 <- East  | EAST ready for NORTH's card to trick 11
+16:11:59.545 -> East  | North plays 8S
+16:11:59.547 <- South | SOUTH ready for NORTH's card to trick 11
+16:11:59.547 -> South | North plays 8S
+16:11:59.547 <- West  | WEST ready for NORTH's card to trick 11
+16:11:59.547 -> West  | North plays 8S
+16:11:59.547 -> West  | West to lead
+16:12:00.146 <- West  | WEST plays th
+16:12:00.146 <- North | NORTH ready for  WEST's card to trick 12
+16:12:00.146 -> North | West plays TH
+16:12:00.146 <- East  | EAST ready for  WEST's card to trick 12
+16:12:00.146 -> East  | West plays TH
+16:12:00.148 <- South | SOUTH ready for  WEST's card to trick 12
+16:12:00.148 -> South | West plays TH
+16:12:00.706 <- North | NORTH plays 9s
+16:12:00.706 <- East  | EAST ready for NORTH's card to trick 12
+16:12:00.706 -> East  | North plays 9S
+16:12:00.706 <- South | SOUTH ready for NORTH's card to trick 12
+16:12:00.708 -> South | North plays 9S
+16:12:00.708 <- West  | WEST ready for NORTH's card to trick 12
+16:12:00.708 -> West  | North plays 9S
+16:12:01.250 <- West  | EAST plays qs
+16:12:01.250 <- North | NORTH ready for Dummy's card to trick 12
+16:12:01.250 -> North | East plays QS
+16:12:01.250 <- East  | EAST ready for Dummy's card to trick 12
+16:12:01.250 -> East  | East plays QS
+16:12:01.250 <- South | SOUTH ready for Dummy's card to trick 12
+16:12:01.250 -> South | East plays QS
+16:12:01.821 <- South | SOUTH plays 6h
+16:12:01.821 <- North | NORTH ready for SOUTH's card to trick 12
+16:12:01.821 -> North | South plays 6H
+16:12:01.821 <- East  | EAST ready for SOUTH's card to trick 12
+16:12:01.821 -> East  | South plays 6H
+16:12:01.821 <- West  | WEST ready for SOUTH's card to trick 12
+16:12:01.821 -> West  | South plays 6H
+16:12:01.821 -> West  | West to lead
+16:12:02.358 <- West  | WEST plays ah
+16:12:02.360 <- North | NORTH ready for  WEST's card to trick 13
+16:12:02.360 -> North | West plays AH
+16:12:02.360 <- East  | EAST ready for  WEST's card to trick 13
+16:12:02.360 -> East  | West plays AH
+16:12:02.360 <- South | SOUTH ready for  WEST's card to trick 13
+16:12:02.360 -> South | West plays AH
+16:12:02.922 <- North | NORTH plays ts
+16:12:02.922 <- East  | EAST ready for NORTH's card to trick 13
+16:12:02.922 -> East  | North plays TS
+16:12:02.922 <- South | SOUTH ready for NORTH's card to trick 13
+16:12:02.922 -> South | North plays TS
+16:12:02.922 <- West  | WEST ready for NORTH's card to trick 13
+16:12:02.922 -> West  | North plays TS
+16:12:03.475 <- West  | EAST plays ks
+16:12:03.476 <- North | NORTH ready for Dummy's card to trick 13
+16:12:03.476 -> North | East plays KS
+16:12:03.477 <- East  | EAST ready for Dummy's card to trick 13
+16:12:03.477 -> East  | East plays KS
+16:12:03.477 <- South | SOUTH ready for Dummy's card to trick 13
+16:12:03.477 -> South | East plays KS
+16:12:04.028 <- South | SOUTH plays 2c
+16:12:04.029 <- North | NORTH ready for SOUTH's card to trick 13
+16:12:04.029 -> North | South plays 2C
+16:12:04.029 <- East  | EAST ready for SOUTH's card to trick 13
+16:12:04.029 -> East  | South plays 2C
+16:12:04.029 <- West  | WEST ready for SOUTH's card to trick 13
+16:12:04.029 -> West  | South plays 2C
+16:12:04.029 -> North | Timing - N/S : this board  0:00,  total  0:00.  E/W : this board  0:00,  total  0:00.
+16:12:04.029 -> East  | Timing - N/S : this board  0:00,  total  0:00.  E/W : this board  0:00,  total  0:00.
+16:12:04.029 -> South | Timing - N/S : this board  0:00,  total  0:00.  E/W : this board  0:00,  total  0:00.
+16:12:04.031 -> West  | Timing - N/S : this board  0:00,  total  0:00.  E/W : this board  0:00,  total  0:00.
+16:12:04.031 -> North | End of session
+16:12:04.031 -> East  | End of session
+16:12:04.031 -> South | End of session
+16:12:04.031 -> West  | End of session
