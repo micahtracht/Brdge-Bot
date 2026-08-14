@@ -21,12 +21,16 @@ Bridge is the last classic game where the best humans still beat the best machin
 docs/
   PLAN.md            # research roadmap: phases, milestones, evaluation criteria
   research/          # deep-dive reports (prior work, tooling, evaluation landscape)
+harness/             # (future) Blue Chip v18 table manager + match orchestration
 engine/              # (future) the bot itself: bidding policy, belief model, cardplay
-eval/                # (future) match harness, table-manager protocol, baselines
+training/            # (future) SL/RL pipelines, configs, ablations
 data/                # (future) deal generation, hand records, training data
 experiments/         # (future) training runs, ablations, results
 ```
 
 ## Status
 
-- 2026-08-14: Project started. Research phase — see `docs/research/` and `docs/PLAN.md`.
+- 2026-08-14: Project started. Research phase complete — four deep-dive reports in
+  `docs/research/` and a phased roadmap in `docs/PLAN.md`. Next up: Phase 0
+  (evaluation harness — endplay/DDS env, WBridge5 + BEN locally, Blue Chip v18
+  table-manager server, 1,000-board baseline matches).
