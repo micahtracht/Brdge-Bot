@@ -28,21 +28,34 @@ _DENOM_TO_CHAR = {Denom.spades: "S", Denom.hearts: "H", Denom.diamonds: "D", Den
 
 
 class Client:
+    wire_log = None  # file object shared by all clients, set by run_server
+
     def __init__(self, reader: asyncio.StreamReader, writer: asyncio.StreamWriter):
         self.reader = reader
         self.writer = writer
         self.seat: str | None = None
         self.team: str | None = None
 
+    def _log(self, direction: str, line: str) -> None:
+        if Client.wire_log:
+            import datetime
+            stamp = datetime.datetime.now().strftime("%H:%M:%S.%f")[:-3]
+            Client.wire_log.write(f"{stamp} {direction} {self.seat or '?':<5} | {line}\n")
+            Client.wire_log.flush()
+
     async def send(self, line: str) -> None:
+        self._log("->", line)
         self.writer.write((line + "\r\n").encode("ascii"))
         await self.writer.drain()
 
     async def recv(self) -> str:
         raw = await self.reader.readline()
         if not raw:
+            self._log("!!", "<disconnected>")
             raise ConnectionError(f"{self.seat or '?'} disconnected")
-        return raw.decode("ascii", errors="replace").strip()
+        line = raw.decode("ascii", errors="replace").strip()
+        self._log("<-", line)
+        return line
 
     async def expect(self, predicate, what: str) -> object:
         """Read lines until predicate returns non-None; error on junk."""
@@ -239,6 +252,9 @@ async def run_server(args) -> list[dict]:
     else:
         deals = list(generate_deals(produce=args.boards, seed=args.seed))
 
+    if getattr(args, "wire_log", None):
+        Client.wire_log = open(args.wire_log, "w")
+
     table = Table(args.ns_name, args.ew_name, verbose=args.verbose)
     ready = asyncio.Event()
 
@@ -287,6 +303,7 @@ def main() -> None:
     ap.add_argument("--ns-name", default="NS")
     ap.add_argument("--ew-name", default="EW")
     ap.add_argument("--out", help="write board records as JSON lines")
+    ap.add_argument("--wire-log", help="log raw protocol lines to this file")
     ap.add_argument("--verbose", action="store_true")
     args = ap.parse_args()
     asyncio.run(run_server(args))

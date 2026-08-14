@@ -16,7 +16,10 @@ param(
     [string]$TmHost = "LocalHost",
     [int]$Port = 2000,
     [string]$Wb5Dir = "C:\Wbridge5",
-    [int]$ConnectDelayMs = 1500
+    [int]$ConnectDelayMs = 1500,
+    # By default instances run invisibly (no windows, no focus stealing);
+    # pass -Visible for debugging. Use wb5_stop.ps1 to kill hidden instances.
+    [switch]$Visible
 )
 
 $ErrorActionPreference = "Stop"
@@ -40,12 +43,32 @@ public static class Wb5 {
     [DllImport("user32.dll")] public static extern bool PostMessage(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam);
     [DllImport("user32.dll", CharSet=CharSet.Unicode)] public static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, IntPtr wParam, string lParam);
     [DllImport("user32.dll")] public static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam);
+    [DllImport("user32.dll")] public static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+    [DllImport("user32.dll")] public static extern bool SetWindowPos(IntPtr hWnd, IntPtr after, int x, int y, int cx, int cy, uint flags);
     public const uint WM_COMMAND = 0x0111;
     public const uint WM_SETTEXT = 0x000C;
     public const uint BM_CLICK = 0x00F5;
     public const uint BM_GETCHECK = 0x00F0;
+    public const int SW_HIDE = 0;
+    public const uint SWP_NOSIZE_NOACTIVATE = 0x0001 | 0x0010; // NOSIZE | NOACTIVATE
 }
 '@
+
+# Hides every window belonging to the given process ids (invisible operation:
+# our automation is message-based, so hidden windows keep working).
+function Hide-ProcessWindows([uint32[]]$Pids) {
+    $script:toHide = New-Object System.Collections.ArrayList
+    $script:hidePids = $Pids
+    $cb = [Wb5+EnumProc]{
+        param($h, $l)
+        [uint32]$p = 0
+        $null = [Wb5]::GetWindowThreadProcessId($h, [ref]$p)
+        if ($script:hidePids -contains $p -and [Wb5]::IsWindowVisible($h)) { $null = $script:toHide.Add($h) }
+        return $true
+    }
+    $null = [Wb5]::EnumWindows($cb, [IntPtr]::Zero)
+    foreach ($h in $script:toHide) { $null = [Wb5]::ShowWindow([IntPtr]$h, [Wb5]::SW_HIDE) }
+}
 
 # Menu command id of Actions -> Connection... (from menu enumeration of 5.12)
 $MENU_CONNECTION = 37
@@ -60,7 +83,8 @@ $iniHost = if ($TmHost -eq "LocalHost") { "127.0.0.1" } else { $TmHost }
     Set-Content -Encoding ascii $ini
 
 foreach ($seat in $Seats) {
-    $proc = Start-Process -FilePath (Join-Path $Wb5Dir "Wbridge5.exe") -WorkingDirectory $Wb5Dir -PassThru
+    $style = if ($Visible) { "Normal" } else { "Minimized" }
+    $proc = Start-Process -FilePath (Join-Path $Wb5Dir "Wbridge5.exe") -WorkingDirectory $Wb5Dir -WindowStyle $style -PassThru
     $script:targetPid = [uint32]$proc.Id
 
     # --- wait for the main form (TSDIAppForm) ---
@@ -86,6 +110,7 @@ foreach ($seat in $Seats) {
     }
     if ($script:hit -eq [IntPtr]::Zero) { throw "no TSDIAppForm for pid $($proc.Id)" }
     $form = $script:hit
+    if (-not $Visible) { $null = [Wb5]::ShowWindow($form, [Wb5]::SW_HIDE) }
     Start-Sleep -Milliseconds $ConnectDelayMs
 
     # --- open Actions -> Connection ---
@@ -112,6 +137,10 @@ foreach ($seat in $Seats) {
     }
     if ($script:hit -eq [IntPtr]::Zero) { throw "Setup dialog did not appear for pid $($proc.Id)" }
     $setup = $script:hit
+    if (-not $Visible) {
+        # shove the dialog off-screen so it never flashes over the user's work
+        $null = [Wb5]::SetWindowPos($setup, [IntPtr]::Zero, -4000, -4000, 0, 0, [Wb5]::SWP_NOSIZE_NOACTIVATE)
+    }
 
     # --- enumerate dialog controls ---
     $script:items = New-Object System.Collections.ArrayList
@@ -153,6 +182,7 @@ foreach ($seat in $Seats) {
     }
     Start-Sleep -Milliseconds 200
     $null = [Wb5]::SendMessage([IntPtr]$connBtn.Hwnd, [Wb5]::BM_CLICK, [IntPtr]::Zero, [IntPtr]::Zero)
-    Write-Output "launched pid $($proc.Id) -> $seat @ ${TmHost}:$Port (Auto)"
     Start-Sleep -Milliseconds 500
+    if (-not $Visible) { Hide-ProcessWindows @([uint32]$proc.Id) }
+    Write-Output "launched pid $($proc.Id) -> $seat @ ${TmHost}:$Port (Auto$(if (-not $Visible) { ', hidden' }))"
 }
