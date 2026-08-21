@@ -2,3 +2,5 @@
 vendor/
 __pycache__/
 *.pyc
+matches/**/*.wire.log
+matches/_test*/

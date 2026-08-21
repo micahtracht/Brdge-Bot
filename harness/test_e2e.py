@@ -15,6 +15,7 @@ async def main() -> None:
     args = argparse.Namespace(
         host="127.0.0.1", port=20571, boards=4, seed=7, pbn=None,
         ns_name="MockNS", ew_name="MockEW", out=None, verbose=True,
+        wire_log=None, from_board=1,
     )
     server_task = asyncio.create_task(run_server(args))
     await asyncio.sleep(0.3)  # let the server bind

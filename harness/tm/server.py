@@ -28,20 +28,19 @@ _DENOM_TO_CHAR = {Denom.spades: "S", Denom.hearts: "H", Denom.diamonds: "D", Den
 
 
 class Client:
-    wire_log = None  # file object shared by all clients, set by run_server
-
-    def __init__(self, reader: asyncio.StreamReader, writer: asyncio.StreamWriter):
+    def __init__(self, reader: asyncio.StreamReader, writer: asyncio.StreamWriter, wire_log=None):
         self.reader = reader
         self.writer = writer
         self.seat: str | None = None
         self.team: str | None = None
+        self.wire_log = wire_log  # per-table file object (tables may share a process)
 
     def _log(self, direction: str, line: str) -> None:
-        if Client.wire_log:
+        if self.wire_log:
             import datetime
             stamp = datetime.datetime.now().strftime("%H:%M:%S.%f")[:-3]
-            Client.wire_log.write(f"{stamp} {direction} {self.seat or '?':<5} | {line}\n")
-            Client.wire_log.flush()
+            self.wire_log.write(f"{stamp} {direction} {self.seat or '?':<5} | {line}\n")
+            self.wire_log.flush()
 
     async def send(self, line: str) -> None:
         self._log("->", line)
@@ -243,54 +242,92 @@ def hands_to_suits(cards: list[str]) -> dict[str, str]:
     return suits
 
 
-async def run_server(args) -> list[dict]:
-    if args.pbn:
-        from endplay.parsers import pbn
-        with open(args.pbn) as f:
-            boards = pbn.load(f)
-        deals = [b.deal for b in boards]
-    else:
-        deals = list(generate_deals(produce=args.boards, seed=args.seed))
+def board_meta(index: int) -> tuple[int, str, str]:
+    """0-based deal index -> (board number, dealer seat, vulnerability key)."""
+    return index + 1, p.SEATS[index % 4], VULN_CYCLE[index % 16]
 
-    if getattr(args, "wire_log", None):
-        Client.wire_log = open(args.wire_log, "w")
 
-    table = Table(args.ns_name, args.ew_name, verbose=args.verbose)
+def make_deals(n: int, seed: int) -> list:
+    """Deterministic deal set: same (n, seed) -> same deals on every table."""
+    return list(generate_deals(produce=n, seed=seed))
+
+
+def load_pbn_deals(path: str) -> list:
+    from endplay.parsers import pbn
+    with open(path) as f:
+        return [b.deal for b in pbn.load(f)]
+
+
+async def run_table(
+    deals: list,
+    *,
+    port: int,
+    ns_name: str,
+    ew_name: str,
+    host: str = "127.0.0.1",
+    out_path: str | None = None,
+    wire_log_path: str | None = None,
+    verbose: bool = False,
+    start_board: int = 1,
+    label: str = "",
+    log=None,
+) -> list[dict]:
+    """Host one table: wait for 4 clients, play deals[start_board-1:], end session.
+
+    Records are appended to out_path as JSON lines *per board* so a crashed or
+    killed run can be resumed with start_board = last completed board + 1.
+    """
+    log = log or (lambda msg: print(msg, file=sys.stderr))
+    tag = f"[{label}] " if label else ""
+    wire_log = open(wire_log_path, "a") if wire_log_path else None
+    out = open(out_path, "a") if out_path else None
+
+    table = Table(ns_name, ew_name, verbose=verbose)
     ready = asyncio.Event()
 
     async def on_connect(reader, writer):
-        client = Client(reader, writer)
+        client = Client(reader, writer, wire_log=wire_log)
         try:
             await table.seat_client(client)
         except ProtocolError as e:
-            print(f"rejected connection: {e}", file=sys.stderr)
+            log(f"{tag}rejected connection: {e}")
             writer.close()
             return
         if len(table.clients) == 4:
             ready.set()
 
-    server = await asyncio.start_server(on_connect, args.host, args.port)
-    print(f"table manager listening on {args.host}:{args.port}", file=sys.stderr)
-    await ready.wait()
-
-    await table.start_session()
-    for i, deal in enumerate(deals):
-        board_no = i + 1
-        dealer = p.SEATS[i % 4]
-        vul = VULN_CYCLE[i % 16]
-        record = await table.play_board(board_no, deal, vul, dealer)
-        table.records.append(record)
-        print(f"board {board_no}: {record.get('contract')} "
-              f"NS {record['score_ns']:+d}", file=sys.stderr)
-    await table.end_session()
-    server.close()
-
-    if args.out:
-        with open(args.out, "w") as f:
-            for r in table.records:
-                f.write(json.dumps(r) + "\n")
-        print(f"wrote {len(table.records)} board records to {args.out}", file=sys.stderr)
+    server = await asyncio.start_server(on_connect, host, port)
+    log(f"{tag}table manager listening on {host}:{port} "
+        f"(boards {start_board}-{len(deals)}, NS={ns_name}, EW={ew_name})")
+    try:
+        await ready.wait()
+        await table.start_session()
+        for i in range(start_board - 1, len(deals)):
+            board_no, dealer, vul = board_meta(i)
+            record = await table.play_board(board_no, deals[i], vul, dealer)
+            record["ns_team"], record["ew_team"] = ns_name, ew_name
+            table.records.append(record)
+            if out:
+                out.write(json.dumps(record) + "\n")
+                out.flush()
+            log(f"{tag}board {board_no}: {record.get('contract')} NS {record['score_ns']:+d}")
+        await table.end_session()
+    finally:
+        server.close()
+        if out:
+            out.close()
+        if wire_log:
+            wire_log.close()
     return table.records
+
+
+async def run_server(args) -> list[dict]:
+    deals = load_pbn_deals(args.pbn) if args.pbn else make_deals(args.boards, args.seed)
+    return await run_table(
+        deals, host=args.host, port=args.port, ns_name=args.ns_name, ew_name=args.ew_name,
+        out_path=args.out, wire_log_path=getattr(args, "wire_log", None),
+        verbose=args.verbose, start_board=getattr(args, "from_board", 1),
+    )
 
 
 def main() -> None:
@@ -298,6 +335,7 @@ def main() -> None:
     ap.add_argument("--host", default="127.0.0.1")
     ap.add_argument("--port", type=int, default=2000)
     ap.add_argument("--boards", type=int, default=2)
+    ap.add_argument("--from-board", type=int, default=1, help="resume from this board number")
     ap.add_argument("--seed", type=int, default=42)
     ap.add_argument("--pbn", help="PBN file to deal from instead of random deals")
     ap.add_argument("--ns-name", default="NS")
