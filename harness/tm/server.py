@@ -276,14 +276,19 @@ async def run_table(
     wire_log_path: str | None = None,
     verbose: bool = False,
     start_board: int = 1,
+    end_board: int | None = None,
     label: str = "",
     log=None,
 ) -> list[dict]:
-    """Host one table: wait for 4 clients, play deals[start_board-1:], end session.
+    """Host one table: wait for 4 clients, play boards start_board..end_board
+    (1-based, inclusive; end defaults to the last deal), then end the session.
 
     Records are appended to out_path as JSON lines *per board* so a crashed or
     killed run can be resumed with start_board = last completed board + 1.
+    Board numbers/dealer/vulnerability are global (from the deal index), so
+    several tables can each take a slice of one deal set.
     """
+    end_board = len(deals) if end_board is None else min(end_board, len(deals))
     log = log or (lambda msg: print(msg, file=sys.stderr))
     tag = f"[{label}] " if label else ""
     wire_log = open(wire_log_path, "a") if wire_log_path else None
@@ -305,11 +310,11 @@ async def run_table(
 
     server = await asyncio.start_server(on_connect, host, port)
     log(f"{tag}table manager listening on {host}:{port} "
-        f"(boards {start_board}-{len(deals)}, NS={ns_name}, EW={ew_name})")
+        f"(boards {start_board}-{end_board}, NS={ns_name}, EW={ew_name})")
     try:
         await ready.wait()
         await table.start_session()
-        for i in range(start_board - 1, len(deals)):
+        for i in range(start_board - 1, end_board):
             board_no, dealer, vul = board_meta(i)
             record = await table.play_board(board_no, deals[i], vul, dealer)
             record["ns_team"], record["ew_team"] = ns_name, ew_name

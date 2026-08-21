@@ -26,7 +26,7 @@ import sys
 import time
 from pathlib import Path
 
-from endplay.dds import calc_dd_table
+from endplay.dds import calc_all_tables
 from endplay.types import Denom, Player
 
 from .tm.server import board_meta, load_pbn_deals, make_deals, run_table
@@ -74,8 +74,14 @@ def dd_score_ns(record: dict, dd_table) -> int | None:
 def annotate_and_score(deals, open_recs: list[dict], closed_recs: list[dict], want_dd: bool) -> list[dict]:
     by_board_o = {r["board"]: r for r in open_recs}
     by_board_c = {r["board"]: r for r in closed_recs}
+    boards = sorted(set(by_board_o) & set(by_board_c))
+    tables = {}
+    if want_dd and boards:
+        # batch, multithreaded DD solve (endplay/DDS) — far faster than per-deal
+        dd_list = calc_all_tables([deals[b - 1] for b in boards])
+        tables = dict(zip(boards, dd_list))
     rows = []
-    for b in sorted(set(by_board_o) & set(by_board_c)):
+    for b in boards:
         o, c = by_board_o[b], by_board_c[b]
         row = {
             "board": b,
@@ -86,7 +92,7 @@ def annotate_and_score(deals, open_recs: list[dict], closed_recs: list[dict], wa
             "imps_a": team_imps(o["score_ns"], c["score_ns"]),
         }
         if want_dd:
-            table = calc_dd_table(deals[b - 1])
+            table = tables[b]
             dd_o, dd_c = dd_score_ns(o, table), dd_score_ns(c, table)
             row["dd"] = {
                 "open_score_ns": dd_o, "closed_score_ns": dd_c,
@@ -149,40 +155,59 @@ async def run_match(args) -> dict:
             pbn_mod.dump([Board(deal=d, board_num=i + 1) for i, d in enumerate(deals)], f)
     n = len(deals)
 
-    open_path, closed_path = out_dir / "open.jsonl", out_dir / "closed.jsonl"
-    open_done, closed_done = read_jsonl(open_path), read_jsonl(closed_path)
-    open_start = (max((r["board"] for r in open_done), default=0)) + 1
-    closed_start = (max((r["board"] for r in closed_done), default=0)) + 1
-    log(f"match '{args.name}': {n} boards; open resumes at {open_start}, closed at {closed_start}")
+    # --- shard the deal set across K table-pairs (open+closed room each) ---
+    # Shard k plays boards [lo_k, hi_k] on ports base+2k (open) / base+2k+1
+    # (closed). Each room appends to its own JSONL and resumes independently.
+    k_tables = max(1, args.tables)
+    chunk = -(-n // k_tables)  # ceil
+    shards = []
+    for k in range(k_tables):
+        lo, hi = k * chunk + 1, min((k + 1) * chunk, n)
+        if lo > hi:
+            break
+        shards.append((k, lo, hi))
 
-    port_open, port_closed = args.port, args.port + 1
-    tasks = []
-    if open_start <= n:
-        tasks.append(run_table(
-            deals, port=port_open, ns_name=args.team_a, ew_name=args.team_b,
-            out_path=str(open_path), wire_log_path=str(out_dir / "open.wire.log"),
-            start_board=open_start, label="open", log=log))
-    if closed_start <= n:
-        tasks.append(run_table(
-            deals, port=port_closed, ns_name=args.team_b, ew_name=args.team_a,
-            out_path=str(closed_path), wire_log_path=str(out_dir / "closed.wire.log"),
-            start_board=closed_start, label="closed", log=log))
+    def room_path(room: str, k: int) -> Path:
+        return out_dir / (f"{room}.jsonl" if k_tables == 1 else f"{room}.{k}.jsonl")
+
+    def room_start(room: str, k: int, lo: int) -> int:
+        done = [r["board"] for r in read_jsonl(room_path(room, k))]
+        return max(done, default=lo - 1) + 1
+
+    plan = []  # (room, k, port, ns, ew, start, hi)
+    for k, lo, hi in shards:
+        plan.append(("open", k, args.port + 2 * k, args.team_a, args.team_b, room_start("open", k, lo), hi))
+        plan.append(("closed", k, args.port + 2 * k + 1, args.team_b, args.team_a, room_start("closed", k, lo), hi))
+    log(f"match '{args.name}': {n} boards over {len(shards)} table-pair(s); "
+        + ", ".join(f"{room}{k}@{port} {start}-{hi}" for room, k, port, _, _, start, hi in plan))
+
+    tasks = [
+        run_table(deals, port=port, ns_name=ns, ew_name=ew,
+                  out_path=str(room_path(room, k)),
+                  wire_log_path=str(out_dir / (f"{room}.wire.log" if k_tables == 1 else f"{room}.{k}.wire.log")),
+                  start_board=start, end_board=hi, label=f"{room}{k if k_tables > 1 else ''}", log=log)
+        for room, k, port, ns, ew, start, hi in plan if start <= hi
+    ]
 
     if tasks:
         servers = asyncio.gather(*tasks)
-        await asyncio.sleep(0.5)  # let both tables bind before clients arrive
-        # WBridge5 seats: team A is NS open / EW closed; team B the reverse.
-        if args.wb5_a and open_start <= n:
-            await asyncio.to_thread(launch_wb5, ["North", "South"], port_open)
-        if args.wb5_b and open_start <= n:
-            await asyncio.to_thread(launch_wb5, ["East", "West"], port_open)
-        if args.wb5_b and closed_start <= n:
-            await asyncio.to_thread(launch_wb5, ["North", "South"], port_closed)
-        if args.wb5_a and closed_start <= n:
-            await asyncio.to_thread(launch_wb5, ["East", "West"], port_closed)
+        await asyncio.sleep(0.5)  # let the tables bind before clients arrive
+        # WBridge5 seats: team A is NS in open rooms / EW in closed rooms; B the
+        # reverse. Launches are sequential (shared INI carries the port), but
+        # each table starts playing as soon as its four seats fill.
+        for room, k, port, ns, ew, start, hi in plan:
+            if start > hi:
+                continue
+            a_seats, b_seats = (["North", "South"], ["East", "West"]) if room == "open" else (["East", "West"], ["North", "South"])
+            if args.wb5_a:
+                await asyncio.to_thread(launch_wb5, a_seats, port)
+            if args.wb5_b:
+                await asyncio.to_thread(launch_wb5, b_seats, port)
         await servers
 
-    rows = annotate_and_score(deals, read_jsonl(open_path), read_jsonl(closed_path), want_dd=not args.no_dd)
+    open_recs = [r for k, _, _ in shards for r in read_jsonl(room_path("open", k))]
+    closed_recs = [r for k, _, _ in shards for r in read_jsonl(room_path("closed", k))]
+    rows = annotate_and_score(deals, open_recs, closed_recs, want_dd=not args.no_dd)
     results = write_report(out_dir / "report.md", args.name, args.team_a, args.team_b, rows, n, not args.no_dd)
     (out_dir / "results.json").write_text(json.dumps({"boards": rows, **results}, indent=1))
     log(f"report: {out_dir / 'report.md'}")
@@ -198,7 +223,8 @@ def main() -> None:
     ap.add_argument("--pbn", help="use these deals instead of generating")
     ap.add_argument("--team-a", default="A")
     ap.add_argument("--team-b", default="B")
-    ap.add_argument("--port", type=int, default=2000, help="open room port; closed room = port+1")
+    ap.add_argument("--port", type=int, default=2000, help="base port; shard k uses port+2k (open) and port+2k+1 (closed)")
+    ap.add_argument("--tables", type=int, default=1, help="number of parallel table-pairs (deal set is sharded across them)")
     ap.add_argument("--wb5-a", action="store_true", help="team A is WBridge5 (auto-launched)")
     ap.add_argument("--wb5-b", action="store_true", help="team B is WBridge5 (auto-launched)")
     ap.add_argument("--no-dd", action="store_true", help="skip double-dummy decomposition")
