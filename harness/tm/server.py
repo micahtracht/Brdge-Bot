@@ -130,7 +130,14 @@ class Table:
             )
             auction.add(actor, bid.call, bid.rest)
             self.log(f"  {actor}: {bid.call}")
-            line = p.format_bid(actor, bid.call, bid.rest)
+            # v18 alert relay (spec lines 177/191): the alert + info go to the
+            # bidder's OPPONENTS ONLY, never the partner. And a dangling "Alert."
+            # with no information (WBridge5's manual-alert style) makes the next
+            # opponent wait forever for info that never comes, so we strip it —
+            # opponents get the alert only when it carries actual information.
+            partner = p.SEATS[(p.SEATS.index(actor) + 2) % 4]
+            bare_line = p.format_bid(actor, bid.call, "")
+            opp_line = p.format_bid(actor, bid.call, p.relay_suffix_for_opponent(bid.rest))
             for seat in p.SEATS:
                 if seat == actor:
                     continue
@@ -139,7 +146,7 @@ class Table:
                     lambda l: r if (r := p.parse_ready_for_bid(l)) and r[0] == seat and r[1] == actor else None,
                     f"{seat} ready for {actor}'s bid",
                 )
-                await c.send(line)
+                await c.send(bare_line if seat == partner else opp_line)
 
         result = auction.contract()
         if result is None:

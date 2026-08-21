@@ -158,3 +158,24 @@ def format_teams(ns: str, ew: str) -> str:
 
 def format_seated(seat: str, team: str) -> str:
     return f'{seat} ("{team}") seated'
+
+
+def relay_suffix_for_opponent(rest: str) -> str:
+    """What to append when relaying an alerted bid to an opponent.
+
+    Per v18 an alert is ``Alert.`` (or ``Infos.``) *followed by information*.
+    WBridge5 emits a bare ``Alert.`` with no information (it assumes the Table
+    Manager will supply it in manual-alert mode); relaying that bare token makes
+    the next opponent block waiting for the missing explanation. So we forward
+    the alert only when it actually carries information, and otherwise strip it
+    to a bare bid. ``rest`` is the trailing text captured by ``parse_bid``
+    (leading whitespace included), e.g. ``" Alert.  15-17 balanced"``.
+    """
+    s = rest.strip()
+    if not s:
+        return ""
+    for token in ("Alert.", "Infos."):
+        if s.startswith(token):
+            info = s[len(token):].strip()
+            return " " + s if info else ""
+    return rest
