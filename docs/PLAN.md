@@ -14,7 +14,7 @@
 2. **But bidding-only + double-dummy scoring is a lab metric, not a SOTA claim.** Every published number carves out the play phase. The credible claim requires full-game matches over the Blue Chip table-manager protocol — which is exactly how WCBC ran and how the unofficial events still run.
 3. **BEN is the full-game scaffold.** Open source (GPL-3.0), actively maintained, ships a Blue Chip v18 client, full retraining pipeline, and already came within 12 IMPs of WBridge5 over 160 boards. Its known losses: declarer-play blunders (~50 IMPs in one 4-set match), no RL, imitation-capped bidding, no defensive-signal understanding.
 4. **Evaluation math**: per-board net-IMP SD ≈ 5.4, so detecting a δ IMP/board edge at 2σ needs ≈ (10.8/δ)² boards — ~470 boards for δ=0.5, ~1,200 for δ=0.3. Championship matches (16–128 boards) are far too short to prove superiority; our claims must rest on 1,000+ board automated matches with duplicated deals.
-5. **Nobody is defending the throne.** WBridge5 frozen since ~2014; official WCBC dormant since 2019; NukkAI exited bridge; FAIR/DeepMind moved on. The active frontier is one Kyoto lab, one journal group, and the BEN/BBO community.
+5. **Nobody is defending the throne — with one new exception.** WBridge5 frozen since ~2014; official WCBC dormant since 2019; NukkAI exited bridge; FAIR/DeepMind moved on. The active frontier is one Kyoto lab, one journal group, the BEN/BBO community — and, as of Aug 2026, **Miai** (Zhiyuan Fan, Gabriele Farina's group at MIT): a from-scratch self-play *full-game* bot at +0.21 IMP/board vs WBridge5 over 1,024 duplicated boards with no search layer (+0.59 by double-dummy on contracts reached). No paper or code yet; expect both. See [research/miai.md](research/miai.md). This raises the bar for any SOTA claim and validates our full-game evaluation protocol.
 
 ## Strategy
 
@@ -56,6 +56,7 @@ Two tracks, in order, with a shared evaluation backbone:
 ### Phase 3 — Make the claim stick
 
 - [ ] Acquire and beat the commercial field under the same protocol: **Q-Plus** (2023 unofficial champion), **Jack** (€89, 10 WCBC titles), **Micro Bridge** (2019 official champion).
+- [ ] **Miai** (MIT): the learned-agent benchmark. It has no table-manager interface, so either (a) exceed its published WBridge5 margin under an equal-or-stricter protocol (≥1,024 duplicated boards, full game), or (b) arrange a head-to-head with the author — our open harness is the natural offer. Track its paper/code release.
 - [ ] Enter the **Goulden** and **computerbridge.se** events (they accept TM-protocol bots; BEN entered exactly this way in 2024).
 - [ ] Write it up — the combination of (reproducible full-game harness + combined SL/RL/BMCS bidding + defense results) is a publishable systems paper; IEEE CoG / journal venues are where this literature lives.
 
