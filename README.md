@@ -2,7 +2,7 @@
 
 A research project to build the strongest computer bridge player in the world.
 
-**Goal 1 (SOTA):** Beat the reigning bots — WBridge5, Jack, and the World Computer Bridge Championship field — in long, verifiable IMP matches, claiming the (currently dormant) state of the art in complete-game computer bridge.
+**Goal (as of Aug 2026): beat Miai.** [Miai](https://bridge.miai.moe) (Zhiyuan Fan, Gabriele Farina's group at MIT) is a from-scratch self-play full-game bridge agent that scores +0.21 IMP/board vs WBridge5 over 1,024 duplicated boards. We aim to exceed that margin by a wide, statistically clean gap under a stricter public protocol (≥2,048 boards, ≥2σ), then beat it head-to-head. See [docs/PLAN.md](docs/PLAN.md).
 
 **North star (superhuman):** Beat top human partnerships at full contract bridge — bidding and play — under tournament conditions with legal disclosure.
 
@@ -30,6 +30,8 @@ experiments/         # (future) training runs, ablations, results
 
 ## Status
 
+- 2026-08-21: Goal reframed around beating Miai; roadmap v2 in `docs/PLAN.md`.
+  Harness validated against real WBridge5 (zero-click, invisible automation).
 - 2026-08-14: Project started. Research phase complete — four deep-dive reports in
   `docs/research/` and a phased roadmap in `docs/PLAN.md`. Next up: Phase 0
   (evaluation harness — endplay/DDS env, WBridge5 + BEN locally, Blue Chip v18
