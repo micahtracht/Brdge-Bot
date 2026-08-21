@@ -1,0 +1,215 @@
+{
+ "boards": [
+  {
+   "board": 1,
+   "open": {
+    "contract": "4H",
+    "declarer": "South",
+    "tricks": 10,
+    "score_ns": 420
+   },
+   "closed": {
+    "contract": "4H",
+    "declarer": "South",
+    "tricks": 10,
+    "score_ns": 420
+   },
+   "imps_a": 0,
+   "dd": {
+    "open_score_ns": 450,
+    "closed_score_ns": 450,
+    "bidding_imps_a": 0,
+    "play_imps_a": 0
+   }
+  },
+  {
+   "board": 2,
+   "open": {
+    "contract": "4H",
+    "declarer": "South",
+    "tricks": 9,
+    "score_ns": -100
+   },
+   "closed": {
+    "contract": "4H",
+    "declarer": "South",
+    "tricks": 9,
+    "score_ns": -100
+   },
+   "imps_a": 0,
+   "dd": {
+    "open_score_ns": 620,
+    "closed_score_ns": 620,
+    "bidding_imps_a": 0,
+    "play_imps_a": 0
+   }
+  },
+  {
+   "board": 3,
+   "open": {
+    "contract": "4H",
+    "declarer": "East",
+    "tricks": 10,
+    "score_ns": -620
+   },
+   "closed": {
+    "contract": "4H",
+    "declarer": "East",
+    "tricks": 10,
+    "score_ns": -620
+   },
+   "imps_a": 0,
+   "dd": {
+    "open_score_ns": -620,
+    "closed_score_ns": -620,
+    "bidding_imps_a": 0,
+    "play_imps_a": 0
+   }
+  },
+  {
+   "board": 4,
+   "open": {
+    "contract": "4S",
+    "declarer": "North",
+    "tricks": 11,
+    "score_ns": 650
+   },
+   "closed": {
+    "contract": "4S",
+    "declarer": "North",
+    "tricks": 11,
+    "score_ns": 650
+   },
+   "imps_a": 0,
+   "dd": {
+    "open_score_ns": -100,
+    "closed_score_ns": -100,
+    "bidding_imps_a": 0,
+    "play_imps_a": 0
+   }
+  },
+  {
+   "board": 5,
+   "open": {
+    "contract": "2S",
+    "declarer": "South",
+    "tricks": 5,
+    "score_ns": -300
+   },
+   "closed": {
+    "contract": "2S",
+    "declarer": "South",
+    "tricks": 5,
+    "score_ns": -300
+   },
+   "imps_a": 0,
+   "dd": {
+    "open_score_ns": -300,
+    "closed_score_ns": -300,
+    "bidding_imps_a": 0,
+    "play_imps_a": 0
+   }
+  },
+  {
+   "board": 6,
+   "open": {
+    "contract": "1C",
+    "declarer": "South",
+    "tricks": 8,
+    "score_ns": 90
+   },
+   "closed": {
+    "contract": "1C",
+    "declarer": "South",
+    "tricks": 8,
+    "score_ns": 90
+   },
+   "imps_a": 0,
+   "dd": {
+    "open_score_ns": 90,
+    "closed_score_ns": 90,
+    "bidding_imps_a": 0,
+    "play_imps_a": 0
+   }
+  },
+  {
+   "board": 7,
+   "open": {
+    "contract": "4Sx",
+    "declarer": "East",
+    "tricks": 10,
+    "score_ns": -790
+   },
+   "closed": {
+    "contract": "4Sx",
+    "declarer": "East",
+    "tricks": 10,
+    "score_ns": -790
+   },
+   "imps_a": 0,
+   "dd": {
+    "open_score_ns": -790,
+    "closed_score_ns": -790,
+    "bidding_imps_a": 0,
+    "play_imps_a": 0
+   }
+  },
+  {
+   "board": 8,
+   "open": {
+    "contract": "3N",
+    "declarer": "West",
+    "tricks": 10,
+    "score_ns": -430
+   },
+   "closed": {
+    "contract": "3N",
+    "declarer": "West",
+    "tricks": 10,
+    "score_ns": -430
+   },
+   "imps_a": 0,
+   "dd": {
+    "open_score_ns": -460,
+    "closed_score_ns": -460,
+    "bidding_imps_a": 0,
+    "play_imps_a": 0
+   }
+  }
+ ],
+ "name": "wb5-control-smoke",
+ "team_a": "WBridge5-A",
+ "team_b": "WBridge5-B",
+ "boards_played": 8,
+ "boards_planned": 8,
+ "imps_a": {
+  "n": 8,
+  "total": 0,
+  "mean": 0.0,
+  "sd": 0.0,
+  "se": 0.0,
+  "ci95_lo": 0.0,
+  "ci95_hi": 0.0,
+  "z": 0.0
+ },
+ "bidding_imps_a": {
+  "n": 8,
+  "total": 0,
+  "mean": 0.0,
+  "sd": 0.0,
+  "se": 0.0,
+  "ci95_lo": 0.0,
+  "ci95_hi": 0.0,
+  "z": 0.0
+ },
+ "play_imps_a": {
+  "n": 8,
+  "total": 0,
+  "mean": 0.0,
+  "sd": 0.0,
+  "se": 0.0,
+  "ci95_lo": 0.0,
+  "ci95_hi": 0.0,
+  "z": 0.0
+ }
+}

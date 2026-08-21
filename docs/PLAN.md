@@ -43,10 +43,12 @@ Workstreams A–C run in parallel; D integrates; E is diplomacy and runs through
 The harness is validated against real WBridge5 ([tm/server.py](../harness/tm/server.py), [wb5_launch.ps1](../harness/wb5_launch.ps1)). Remaining:
 
 - [ ] **Team-match orchestration**: duplicated boards across two tables (NS/EW swapped), per-board IMP diff, running totals, resumable from PBN + JSONL, final report with mean ± SE and 95% CI.
-- [ ] **Parallel tables**: N tables on N ports, each with its own WBridge5 pair; measure boards/hour on this machine (local compute stays light — WBridge5 is single-threaded and cheap; the bottleneck is our own engine's DDS sampling).
+- [ ] **Parallel tables**: N tables on N ports, each with its own WBridge5 pair; measure boards/hour on this machine (local compute stays light — WBridge5 is single-threaded and cheap; the bottleneck is our own engine's DDS sampling). *Measured 2026-08-21: WBridge5-vs-WBridge5 ran ~1 board/min per room (occasional ~4-min board when WBridge5 thinks long). A 2,048-board match single-table is ~34 h, so parallel tables are needed for overnight turnaround.*
 - [ ] **Protocol fidelity**: relay alerts to opponents only; restart/timeout handling; the one unreproduced board-2 stall — keep wire logs on in every run.
 - [ ] **Double-dummy annotation** of every played board (endplay): lets us decompose every margin into *bidding edge* (DD value of contracts) and *play conversion* (realized minus DD) — the same decomposition Miai reported, and our main diagnostic.
-- [ ] **Baselines on record**: BEN vs WBridge5 (2,048 boards) and WBridge5 vs WBridge5 (noise floor / variance estimate on our deals).
+- [x] **Pipeline-fidelity control**: WBridge5 vs WBridge5, identical deals both rooms → must score exactly 0 IMPs. *(2026-08-21: 8-board run, all boards push, 0 IMP / 0 SD — validates the full match pipeline incl. duplicated-board swap, doubled-contract scoring, and DD decomposition. Finding: **WBridge5 is deterministic** under identical config + deals, so this control cannot estimate deal variance — it's a regression check, not a noise floor. Keep it as a cheap end-to-end CI assertion.)*
+- [ ] **Per-board variance estimate**: comes from a *differing-strategy* match (BEN vs WBridge5 below), not the WB5-vs-WB5 control. Use SD ≈ 5.4 as the planning constant until measured.
+- [ ] **Baselines on record**: BEN vs WBridge5 (2,048 boards) — also our first real per-board SD measurement.
 
 **Exit:** an unattended 2,048-board duplicated match completes overnight with a CI'd report and DD decomposition.
 
