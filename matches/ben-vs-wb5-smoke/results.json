@@ -1,0 +1,83 @@
+{
+ "boards": [
+  {
+   "board": 1,
+   "open": {
+    "contract": "4S",
+    "declarer": "West",
+    "tricks": 9,
+    "score_ns": 50
+   },
+   "closed": {
+    "contract": "4S",
+    "declarer": "West",
+    "tricks": 9,
+    "score_ns": 50
+   },
+   "imps_a": 0,
+   "dd": {
+    "open_score_ns": 50,
+    "closed_score_ns": 50,
+    "bidding_imps_a": 0,
+    "play_imps_a": 0
+   }
+  },
+  {
+   "board": 2,
+   "open": {
+    "contract": "2C",
+    "declarer": "South",
+    "tricks": 8,
+    "score_ns": 90
+   },
+   "closed": {
+    "contract": "2D",
+    "declarer": "West",
+    "tricks": 8,
+    "score_ns": -90
+   },
+   "imps_a": 5,
+   "dd": {
+    "open_score_ns": 90,
+    "closed_score_ns": -90,
+    "bidding_imps_a": 5,
+    "play_imps_a": 0
+   }
+  }
+ ],
+ "name": "ben-vs-wb5-smoke",
+ "team_a": "BEN",
+ "team_b": "WBridge5",
+ "boards_played": 2,
+ "boards_planned": 2,
+ "imps_a": {
+  "n": 2,
+  "total": 5,
+  "mean": 2.5,
+  "sd": 3.5355339059327378,
+  "se": 2.5,
+  "ci95_lo": -2.4000000000000004,
+  "ci95_hi": 7.4,
+  "z": 1.0
+ },
+ "bidding_imps_a": {
+  "n": 2,
+  "total": 5,
+  "mean": 2.5,
+  "sd": 3.5355339059327378,
+  "se": 2.5,
+  "ci95_lo": -2.4000000000000004,
+  "ci95_hi": 7.4,
+  "z": 1.0
+ },
+ "play_imps_a": {
+  "n": 2,
+  "total": 0,
+  "mean": 0.0,
+  "sd": 0.0,
+  "se": 0.0,
+  "ci95_lo": 0.0,
+  "ci95_hi": 0.0,
+  "z": 0.0
+ }
+}
