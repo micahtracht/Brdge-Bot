@@ -17,6 +17,7 @@ param(
     [int]$Port = 2000,
     [string]$Wb5Dir = "C:\Wbridge5",
     [int]$ConnectDelayMs = 1500,
+    [string]$IniSnapshot = "",
     # By default instances run invisibly (no windows, no focus stealing);
     # pass -Visible for debugging. Use wb5_stop.ps1 to kill hidden instances.
     [switch]$Visible
@@ -73,8 +74,16 @@ function Hide-ProcessWindows([uint32[]]$Pids) {
 # Menu command id of Actions -> Connection... (from menu enumeration of 5.12)
 $MENU_CONNECTION = 37
 
-# Point the shared INI at the table manager before launching anything.
+# Optionally restore a known configuration snapshot first (e.g. the committed
+# harness\wbridge5-sayc.ini: bidding system SAYC for both sides, level 4,
+# 500 ms delay). WBridge5 only persists settings via Preferences->Save, so a
+# snapshot is the reliable way to pin the engine's configuration for a match.
 $ini = Join-Path $Wb5Dir "WBRIDGE5.INI"
+if ($IniSnapshot) {
+    Copy-Item -Path $IniSnapshot -Destination $ini -Force
+}
+
+# Point the shared INI at the table manager before launching anything.
 $iniHost = if ($TmHost -eq "LocalHost") { "127.0.0.1" } else { $TmHost }
 (Get-Content $ini) `
     -replace '^Table=.*', 'Table=1' `
