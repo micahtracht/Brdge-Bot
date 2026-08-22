@@ -52,6 +52,31 @@ def read_jsonl(path: Path) -> list[dict]:
         return [json.loads(line) for line in f if line.strip()]
 
 
+BEN_DIR = HERE.parent / "vendor" / "ben"
+BEN_PY = BEN_DIR / ".venv" / "Scripts" / "python.exe"
+
+
+def launch_ben(seat: str, port: int, name: str, config: str, opponent: str,
+               log_path: Path, nosearch: bool = False) -> subprocess.Popen:
+    """Spawn one BEN table-manager client (vendor/ben, its own Python 3.12 venv).
+
+    config/opponent are paths relative to vendor/ben/src (e.g. "config/default.conf",
+    "config/opponent/WBridge5-Sayc.conf"). Output goes to log_path.
+    """
+    if not BEN_PY.exists():
+        raise SystemExit(f"BEN venv not found at {BEN_PY} — set it up first (see docs/PLAN.md Workstream A)")
+    cmd = [str(BEN_PY), "table_manager_client.py", "--host", "127.0.0.1", "--port", str(port),
+           "--name", name, "--seat", seat, "--config", config]
+    if opponent:
+        cmd += ["--opponent", opponent]
+    if nosearch:
+        cmd += ["--nosearch", "true"]
+    log(f"launching BEN {seat} on port {port} ({config})")
+    logf = open(log_path, "a", encoding="utf-8", errors="replace")
+    env = dict(os.environ, PYTHONIOENCODING="utf-8", PYTHONUNBUFFERED="1")
+    return subprocess.Popen(cmd, cwd=str(BEN_DIR / "src"), stdout=logf, stderr=subprocess.STDOUT, env=env)
+
+
 def launch_wb5(seats: list[str], port: int) -> None:
     cmd = ["powershell", "-ExecutionPolicy", "Bypass", "-File", str(WB5_LAUNCHER),
            "-Seats", ",".join(seats), "-Port", str(port)]
@@ -189,6 +214,7 @@ async def run_match(args) -> dict:
         for room, k, port, ns, ew, start, hi in plan if start <= hi
     ]
 
+    procs: list[subprocess.Popen] = []
     if tasks:
         servers = asyncio.gather(*tasks)
         await asyncio.sleep(0.5)  # let the tables bind before clients arrive
@@ -203,7 +229,19 @@ async def run_match(args) -> dict:
                 await asyncio.to_thread(launch_wb5, a_seats, port)
             if args.wb5_b:
                 await asyncio.to_thread(launch_wb5, b_seats, port)
-        await servers
+            for is_a, seats in ((True, a_seats), (False, b_seats)):
+                if (args.ben_a if is_a else args.ben_b):
+                    team = args.team_a if is_a else args.team_b
+                    for seat in seats:
+                        procs.append(launch_ben(
+                            seat, port, team, args.ben_config, args.ben_opponent,
+                            out_dir / f"ben.{room}{k}.{seat}.log", nosearch=args.ben_nosearch))
+        try:
+            await servers
+        finally:
+            for pr in procs:
+                if pr.poll() is None:
+                    pr.terminate()
 
     open_recs = [r for k, _, _ in shards for r in read_jsonl(room_path("open", k))]
     closed_recs = [r for k, _, _ in shards for r in read_jsonl(room_path("closed", k))]
@@ -227,6 +265,11 @@ def main() -> None:
     ap.add_argument("--tables", type=int, default=1, help="number of parallel table-pairs (deal set is sharded across them)")
     ap.add_argument("--wb5-a", action="store_true", help="team A is WBridge5 (auto-launched)")
     ap.add_argument("--wb5-b", action="store_true", help="team B is WBridge5 (auto-launched)")
+    ap.add_argument("--ben-a", action="store_true", help="team A is BEN (auto-launched from vendor/ben)")
+    ap.add_argument("--ben-b", action="store_true", help="team B is BEN (auto-launched from vendor/ben)")
+    ap.add_argument("--ben-config", default="config/default.conf", help="BEN config, relative to vendor/ben/src")
+    ap.add_argument("--ben-opponent", default="", help="BEN opponent config, e.g. config/opponent/WBridge5-Sayc.conf")
+    ap.add_argument("--ben-nosearch", action="store_true", help="BEN: neural net only, no simulation search")
     ap.add_argument("--no-dd", action="store_true", help="skip double-dummy decomposition")
     ap.add_argument("--out-dir", default="matches")
     args = ap.parse_args()

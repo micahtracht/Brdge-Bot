@@ -32,6 +32,7 @@ async def main() -> None:
     args = argparse.Namespace(
         name=name, boards=6, seed=11, pbn=None, team_a="MockA", team_b="MockB",
         port=20600, tables=2, wb5_a=False, wb5_b=False, no_dd=False, out_dir=str(out_dir),
+        ben_a=False, ben_b=False, ben_config="config/default.conf", ben_opponent="", ben_nosearch=False,
     )
     match_task = asyncio.create_task(run_match(args))
     await asyncio.sleep(1.0)
